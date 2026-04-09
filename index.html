@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Yannis Rukiramarigo | BUT R&T Cyber</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="présentation.html">Présentation</a></li>
+
+      <li class="nav-dropdown">
+        <a href="#">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène informatique</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux informatiques</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="bilan.html">Bilans</a></li>
+    </ul>
+
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+    <section class="hero grid-bg">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-greeting">// Portfolio de Yannis</p>
+          <h1 class="hero-name">
+            Rukiramarigo<br>
+            <span class="accent">Yannis</span>
+          </h1>
+          <p class="hero-title">
+            Étudiant BUT Réseaux &amp; Télécommunications — Parcours Cybersécurité
+          </p>
+          <p class="hero-desc">
+            Ce portfolio académique documente ma progression, mes analyses
+            réflexives et mes compétences développées au cours de ma formation
+            en BUT R&amp;T, à travers mes Projets (Situations d'Apprentissage et d'Évaluation)
+            du Semestre 1.
+          </p>
+          <div class="hero-tags">
+            <span class="tag bg-soft-blue text-soft-blue">IUT Grand Ouest Normandie</span>
+            <span class="tag bg-soft-mauve text-soft-mauve">Cybersécurité</span>
+            <span class="tag">Réseaux</span>
+            <span class="tag">Administration SI</span>
+          </div>
+          <div class="hero-actions">
+            <a href="presentation.html" class="btn btn-primary">Mon profil →</a>
+            <a href="#projets" class="btn btn-outline">Explorer mes projets</a>
+          </div>
+          <div class="scroll-hint">
+            ↓ &nbsp; Découvrir le portfolio
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <img src="photo.png" alt="Photo professionnelle de Yannis" class="hero-photo-cadrée">
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label text-soft-blue">// 01 — Mes Projets (Semestre 1)</p>
+          <h2 class="section-title">Projets d'Apprentissage &amp; Évaluation</h2>
+          <div class="sep bg-soft-mauve"></div>
+          <p class="section-sub text-med">
+            Chaque projet est une mise en situation professionnelle où j'applique mes
+            connaissances techniques pour relever des défis concrets.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <a href="sae_101.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve">Projet 1.01</span>
+              <h3>Se sensibiliser à l’hygiène informatique</h3>
+            </div>
+            <p><strong>But :</strong> Sensibiliser aux bonnes pratiques de cybersécurité et aux enjeux de l'hygiène numérique.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Individuel</span>
+              <span class="tag">RT1</span><span class="tag">Cyber1</span>
+            </div>
+          </a>
+
+          <a href="sae_102.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-blue">Projet 1.02</span>
+              <h3>S’initier aux réseaux informatiques</h3>
+            </div>
+            <p><strong>But :</strong> Installation de postes clients et configuration de base d'un réseau local.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-blue text-soft-blue">Individuel</span>
+              <span class="tag">RT1</span>
+            </div>
+          </a>
+
+          <a href="sae_103.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve">Projet 1.03</span>
+              <h3>Découvrir un dispositif de transmission</h3>
+            </div>
+            <p><strong>But :</strong> Mesure de signaux et déploiement de supports de transmission de données.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Groupe</span>
+              <span class="tag">RT2</span>
+            </div>
+          </a>
+
+          <a href="sae_104.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-blue">Projet 1.04</span>
+              <h3>Se présenter sur Internet</h3>
+            </div>
+            <p><strong>But :</strong> Création d'un site web et maîtrise des technologies de l'Internet.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-blue text-soft-blue">Individuel</span>
+              <span class="tag">RT3</span>
+            </div>
+          </a>
+
+          <a href="sae_105.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve">Projet 1.05</span>
+              <h3>Traiter des données</h3>
+            </div>
+            <p><strong>But :</strong> Utilisation d'outils informatiques pour le traitement et la gestion de données.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Duo</span>
+              <span class="tag">RT3</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Portfolio de <span>Rukiramarigo Yannis</span> —
+        BUT R&amp;T Cyber — yannis.rukiramarigo@etudiant.unicaen.fr
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

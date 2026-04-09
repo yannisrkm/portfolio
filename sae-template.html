@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAÉ X.XX – [Nom de la SAÉ] | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">[P.Nom]<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../presentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="active">Mes SAÉs</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae-101.html">SAÉ 1.01</a></li>
+          <li><a href="sae-102.html">SAÉ 1.02</a></li>
+        </ul>
+      </li>
+      <li><a href="../bilans/bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Accueil</a>
+          <span>›</span>
+          <a href="../index.html#saes">SAÉs</a>
+          <span>›</span>
+          <span>SAÉ X.XX</span>
+        </div>
+
+        <h1>SAÉ X.XX – [Nom complet de la SAÉ]</h1>
+
+        <div class="meta">
+          <span class="tag cyan">SAÉ X.XX</span>
+          <span class="tag purple">[Compétence : RT1 / RT2 / RT3 / Cyber]</span>
+          <span class="tag">[Semestre : S1 / S2 / S3 / S4]</span>
+          <span class="tag">[Travail : Individuel / Groupe de X]</span>
+        </div>
+      </div>
+
+      <div class="sae-layout">
+
+        <div class="sae-content">
+
+          <div class="card content-block">
+            <h2>Contexte &amp; Objectifs</h2>
+            <p>
+              [Décris ici le contexte général de la SAÉ : dans quel
+              environnement professionnel se déroule-t-elle ? Quel était
+              l'objectif principal ? Quels acteurs étaient impliqués ?]
+            </p>
+            <p>
+              <strong style="color:var(--text-1);">Compétences visées :</strong>
+              [Indique les compétences du référentiel ciblées par cette SAÉ.]
+            </p>
+          </div>
+
+          <div class="card content-block">
+            <h2>Tâches réalisées</h2>
+            <p>Ma contribution personnelle dans cette SAÉ :</p>
+            <ul>
+              <li>[Tâche 1 : Ex. Configuration des interfaces réseau sous Linux]</li>
+              <li>[Tâche 2 : Ex. Installation et paramétrage du service DHCP]</li>
+            </ul>
+          </div>
+
+          <div class="card content-block">
+            <h2>Résultats obtenus &amp; Preuves</h2>
+            <p>
+              [Décris les productions finales : livrables, configurations,
+              présentations, prototypes réalisés, et si possible leur impact
+              ou utilité dans le contexte de la mission.]
+            </p>
+            
+            <div style="margin-top:1.25rem; padding:1rem; background:var(--bg-1); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--cyan);margin-bottom:.5rem;">
+                📎 TRACE 1 — [Type : schéma / capture / extrait de code / livrable]
+              </p>
+              <p style="color:var(--text-2);font-size:.875rem;margin-top:.75rem;">
+                [Commente et justifie cette trace : pourquoi l'as-tu choisie ?
+                Qu'illustre-t-elle concrètement par rapport à la compétence ?]
+              </p>
+            </div>
+          </div>
+
+          <div class="card content-block">
+            <h2>Autoévaluation</h2>
+            <p>
+              Analyse réflexive de mon expérience dans cette SAÉ :
+              difficultés rencontrées, solutions mises en place, apprentissages
+              et positionnement sur le niveau de maîtrise atteint.
+            </p>
+
+            <div class="auteval-grid" style="margin-top:1.25rem;">
+              <div class="auteval-item good">
+                <p class="auteval-label">✅ Points forts</p>
+                <p>[Ce que tu as maîtrisé, bien réussi, su adapter dans cette SAÉ.]</p>
+              </div>
+              <div class="auteval-item improve">
+                <p class="auteval-label">🔧 Axes de progrès</p>
+                <p>[Ce que tu aurais pu faire autrement, les difficultés non résolues, points à consolider.]</p>
+              </div>
+            </div>
+
+            <div class="niveau-bar-wrap" style="margin-top:1.5rem;">
+              <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--cyan);margin-bottom:.75rem;">
+                NIVEAU DE MAÎTRISE ESTIMÉ — [Compétence principale]
+              </p>
+              <div class="niveau-label">
+                <span>[Ex. AC11.03 – Configuration réseau local]</span>
+                <span>50%</span>
+              </div>
+              <div class="niveau-bar">
+                <div class="niveau-fill" style="width: 50%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="sae-sidebar">
+          <div class="sidebar-card">
+            <h4>Apprentissages critiques</h4>
+            <div class="ac-item">
+              <span class="ac-code">AC1X.0X</span>
+              <span class="ac-label">[Libellé de l'AC]</span>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Informations</h4>
+            <div class="info-list">
+              <div class="info-item">
+                <span class="label">Semestre</span>
+                <span>[S1 / S2 / …]</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Modalité</span>
+                <span>[Individuel / Groupe]</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>[Prénom Nom]</span> — BUT R&amp;T Parcours Cyber — <span>[Année]</span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
