@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bilan par compétence | Portfolio</title>
+  <title>Bilan par compétence | Portfolio Yannis</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="navbar">
-    <a href="../index.html" class="nav-logo">[P.Nom]<span>.</span></a>
+    <a href="index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="../presentation.html">Présentation</a></li>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="présentation.html">Présentation</a></li>
       <li class="nav-dropdown">
-        <a href="#">Mes SAÉs</a>
+        <a href="#">Mes Projets</a>
         <ul class="dropdown-menu">
-          <li><a href="../saes/sae-101.html">SAÉ 1.01</a></li>
-          <li><a href="../saes/sae-102.html">SAÉ 1.02</a></li>
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
         </ul>
       </li>
       <li><a href="bilan.html" class="active">Bilans</a></li>
@@ -30,111 +33,267 @@
 
       <div class="page-hero">
         <div class="breadcrumb">
-          <a href="../index.html">Accueil</a>
-          <span>›</span>
-          <span>Bilan par compétence</span>
+          <a href="index.html">Accueil</a> › <span>Bilan par compétence</span>
         </div>
-        <h1>Bilan par compétence</h1>
-        <div class="meta">
-          <span class="tag cyan">Semestre [S1 / S2]</span>
-          <span class="tag">Synthèse transversale</span>
+        <h1 class="page-hero-title">Bilan par compétence</h1>
+        <div class="hero-tags" style="margin-bottom: 1.5rem;">
+          <span class="tag bg-soft-blue text-soft-blue">Semestre 1</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">Synthèse transversale</span>
         </div>
-        <br>
-        <p style="color:var(--text-2); max-width:700px; font-size:.95rem;">
-          Cette page regroupe les apprentissages issus de l'ensemble des SAÉ
-          par compétence, identifie les apprentissages critiques maîtrisés et
-          ceux à renforcer, et dresse une projection sur la suite de la formation.
+        <p class="section-sub">
+          Cette page regroupe les apprentissages issus de l'ensemble de mes 5 projets (SAÉ) du premier semestre. Elle identifie les compétences maîtrisées, celles à renforcer, et dresse ma projection pour la suite de la formation en BUT R&T Cyber.
         </p>
       </div>
 
-      <section id="rt1">
+      <section id="rt1" style="padding-top: 0;">
+        <div class="section-header">
+          <p class="section-label text-soft-blue">// Compétence 1</p>
+          <h2 class="section-title">🌐 RT1 — Administrer les réseaux et l'Internet</h2>
+          <div class="sep bg-soft-blue"></div>
+          <p class="section-sub">Niveau 1 — Assister l'administrateur du réseau</p>
+        </div>
+
         <div class="bilan-layout">
-
-          <div>
-            <div class="section-header">
-              <p class="section-label">// Compétence 1</p>
-              <h2 class="section-title">
-                🌐 RT1 — Administrer les réseaux et l'Internet
-              </h2>
-              <div class="sep"></div>
-              <p class="section-sub">Niveau 1 — Assister l'administrateur du réseau</p>
-            </div>
-
-            <div class="card content-block" style="margin-bottom:1.5rem;">
-              <h2>Synthèse de ma progression</h2>
+          <div class="bilan-content">
+            <div class="card" style="margin-bottom: 2rem;">
+              <h3>Synthèse de ma progression</h3>
               <p>
-                [Rédige ici ta synthèse pour la compétence RT1 : comment les
-                SAÉs t'ont permis de progresser dans cette compétence. Relie
-                tes réalisations aux AC du référentiel. Sois analytique, pas
-                seulement descriptif.]
+                Le <strong>Projet 1.02</strong> a été le cœur de mon apprentissage pour cette compétence. J'ai pu y configurer mes premiers équipements (switchs, routeurs) et assimiler l'architecture physique et logique d'un réseau local (adressage IP, VLANs de base). 
+              </p>
+              <p>
+                Le <strong>Projet 1.01</strong> est venu compléter cette vision en m'apprenant à cartographier un réseau (découverte de machines et d'OS) tout en appliquant les bonnes pratiques de sécurité dès la conception de l'architecture.
               </p>
             </div>
 
-            <div class="card" style="margin-bottom:1.5rem; padding:0; overflow:hidden;">
+            <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
               <table class="comp-table">
                 <thead>
                   <tr>
                     <th>AC</th>
-                    <th>Libellé</th>
-                    <th>SAÉs</th>
+                    <th>Apprentissage Critique</th>
+                    <th>Projets</th>
                     <th>Statut</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="tag cyan" style="font-size:.7rem;">AC11.01</span></td>
+                    <td><span class="tag bg-soft-blue text-soft-blue">AC11.01</span></td>
                     <td>Maîtriser les lois fondamentales de l'électricité</td>
-                    <td style="font-family:var(--font-mono);font-size:.8rem;">1.02, 2.04</td>
-                    <td><span class="status-dot ok">Maîtrisé</span></td>
+                    <td>1.02</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
                   </tr>
                   <tr>
-                    <td><span class="tag cyan" style="font-size:.7rem;">AC11.02</span></td>
-                    <td>Architecture et fondements des systèmes numériques</td>
-                    <td style="font-family:var(--font-mono);font-size:.8rem;">1.01, 1.02</td>
-                    <td><span class="status-dot ok">Maîtrisé</span></td>
+                    <td><span class="tag bg-soft-blue text-soft-blue">AC11.02</span></td>
+                    <td>Comprendre l'architecture des systèmes numériques</td>
+                    <td>1.01, 1.02</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag bg-soft-blue text-soft-blue">AC11.03</span></td>
+                    <td>Configurer les fonctions de base du réseau local</td>
+                    <td>1.02</td>
+                    <td><span class="status-dot wip">En cours</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="card content-block">
+              <h3>Axes de développement & Projection</h3>
+              <p>
+                Pour le Semestre 2, mon objectif est de gagner en autonomie sur l'interface en ligne de commande (CLI) des équipements réseaux et d'approfondir la configuration des protocoles de routage dynamique.
+              </p>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.5rem;">Niveau global estimé</h4>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Connaissances</span><span>70%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-blue" style="width: 70%;"></div></div>
+              </div>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Savoir-faire</span><span>60%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-blue" style="width: 60%;"></div></div>
+              </div>
+            </div>
+            <div class="card">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Projets contributeurs</h4>
+              <div style="display:flex;flex-direction:column;gap:.5rem;">
+                <a href="sae_101.html" class="tag bg-soft-blue text-soft-blue">Projet 1.01 →</a>
+                <a href="sae_102.html" class="tag bg-soft-blue text-soft-blue">Projet 1.02 →</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="rt2" style="padding-top: 2rem;">
+        <div class="section-header">
+          <p class="section-label text-soft-mauve">// Compétence 2</p>
+          <h2 class="section-title">📡 RT2 — Connecter les entreprises et les usagers</h2>
+          <div class="sep bg-soft-mauve"></div>
+          <p class="section-sub">Niveau 1 — Découvrir les transmissions et la ToIP</p>
+        </div>
+
+        <div class="bilan-layout">
+          <div class="bilan-content">
+            <div class="card" style="margin-bottom: 2rem;">
+              <h3>Synthèse de ma progression</h3>
+              <p>
+                Le <strong>Projet 1.03</strong> a été entièrement dédié à cette compétence. Travaillant en groupe, j'ai manipulé des supports physiques réels (câbles coaxiaux, paires torsadées, fibre optique). 
+              </p>
+              <p>
+                J'ai appris à utiliser des outils de mesure professionnels comme l'analyseur de spectre, l'oscilloscope, le réflectomètre ou encore le photomètre pour identifier des défauts de câble (mesure DTF) et calculer l'atténuation d'une liaison fibre optique.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+              <table class="comp-table">
+                <thead>
+                  <tr>
+                    <th>AC</th>
+                    <th>Apprentissage Critique</th>
+                    <th>Projets</th>
+                    <th>Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag bg-soft-mauve text-soft-mauve">AC12.01</span></td>
+                    <td>Mesurer et analyser les signaux</td>
+                    <td>1.03</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag bg-soft-mauve text-soft-mauve">AC12.02</span></td>
+                    <td>Caractériser des systèmes de transmission</td>
+                    <td>1.03</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag bg-soft-mauve text-soft-mauve">AC12.03</span></td>
+                    <td>Déployer des supports de transmission</td>
+                    <td>1.03</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="card content-block">
-              <h2>Axes de développement &amp; Projection</h2>
+              <h3>Axes de développement & Projection</h3>
               <p>
-                [Quels AC dois-tu encore renforcer ? Quels objectifs te fixes-tu
-                pour le prochain semestre concernant cette compétence ?]
+                Bien que la manipulation du matériel soit acquise, je dois encore fluidifier mes calculs théoriques (bande passante, calculs de décibels complexes) pour être plus rapide lors des prochaines phases d'analyse.
               </p>
             </div>
           </div>
 
-          <aside class="sae-sidebar">
-            <div class="sidebar-card">
-              <h4>Niveau global estimé</h4>
-              <div class="radar-visual" style="margin-top:.75rem;">
-                <div class="radar-item">
-                  <div class="ri-label"><span>Connaissances</span><span>50%</span></div>
-                  <div class="radar-bar"><div class="radar-fill" style="width: 50%;"></div></div>
-                </div>
-                <div class="radar-item">
-                  <div class="ri-label"><span>Savoir-faire</span><span>50%</span></div>
-                  <div class="radar-bar"><div class="radar-fill" style="width: 50%;"></div></div>
-                </div>
-                <div class="radar-item">
-                  <div class="ri-label"><span>Adaptation</span><span>50%</span></div>
-                  <div class="radar-bar"><div class="radar-fill" style="width: 50%;"></div></div>
-                </div>
+          <aside>
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.5rem;">Niveau global estimé</h4>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Mesures Physiques</span><span>80%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-mauve" style="width: 80%;"></div></div>
+              </div>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Analyse de données</span><span>65%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-mauve" style="width: 65%;"></div></div>
               </div>
             </div>
-
-            <div class="sidebar-card">
-              <h4>SAÉs contributrices</h4>
-              <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:.25rem;">
-                <a href="../saes/sae-102.html" style="color:var(--text-2);font-size:.875rem;" class="tag">SAÉ 1.02 →</a>
-                <a href="../saes/sae-103.html" style="color:var(--text-2);font-size:.875rem;" class="tag">SAÉ 1.03 →</a>
-                 <a href="../saes/sae-104.html" style="color:var(--text-2);font-size:.875rem;" class="tag">SAÉ 1.04 →</a>
+            <div class="card">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Projets contributeurs</h4>
+              <div style="display:flex;flex-direction:column;gap:.5rem;">
+                <a href="sae_103.html" class="tag bg-soft-mauve text-soft-mauve">Projet 1.03 →</a>
               </div>
             </div>
           </aside>
+        </div>
+      </section>
 
+      <section id="rt3" style="padding-top: 2rem;">
+        <div class="section-header">
+          <p class="section-label text-soft-blue">// Compétence 3 & Cyber</p>
+          <h2 class="section-title">💻 RT3 — Outils informatiques & Hygiène Cyber</h2>
+          <div class="sep bg-soft-blue"></div>
+          <p class="section-sub">Niveau 1 — S'intégrer dans un service informatique / Sensibilisation aux vulnérabilités</p>
+        </div>
+
+        <div class="bilan-layout">
+          <div class="bilan-content">
+            <div class="card" style="margin-bottom: 2rem;">
+              <h3>Synthèse de ma progression</h3>
+              <p>
+                Cette compétence a été couverte par deux axes majeurs : le développement et la sécurité. Avec le <strong>Projet 1.04</strong>, j'ai créé mon premier site web, découvrant le HTML/CSS et l'hébergement (GitHub). Le <strong>Projet 1.05</strong> m'a initié à la programmation Python pour requêter une API (Overpass) et formater des données complexes en Markdown/HTML.
+              </p>
+              <p>
+                L'axe sécurité a été validé par le <strong>Projet 1.01</strong>. J'y ai étudié les protocoles de chiffrement, le durcissement des connexions SSH (clés publiques/privées) et les préconisations de l'ANSSI, affirmant mon attrait pour la cybersécurité.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+              <table class="comp-table">
+                <thead>
+                  <tr>
+                    <th>AC</th>
+                    <th>Apprentissage Critique</th>
+                    <th>Projets</th>
+                    <th>Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag bg-soft-blue text-soft-blue">AC13.01</span></td>
+                    <td>Utiliser les systèmes informatiques et outils métiers</td>
+                    <td>1.04, 1.05</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag bg-soft-blue text-soft-blue">AC13.02</span></td>
+                    <td>Lire, modifier et écrire un programme</td>
+                    <td>1.04, 1.05</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag bg-soft-blue text-soft-blue">Cyber1</span></td>
+                    <td>Bonnes pratiques et recommandations de cybersécurité</td>
+                    <td>1.01</td>
+                    <td><span class="status-dot ok">Acquis</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card content-block">
+              <h3>Axes de développement & Projection</h3>
+              <p>
+                Je souhaite continuer à développer mes compétences en scripting (Python, Bash) car l'automatisation est une clé essentielle pour l'administration et la surveillance en cybersécurité.
+              </p>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.5rem;">Niveau global estimé</h4>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Programmation (Python/Web)</span><span>75%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-blue" style="width: 75%;"></div></div>
+              </div>
+              <div class="jauge-row">
+                <div class="jauge-label"><span>Conscience Sécurité</span><span>85%</span></div>
+                <div class="jauge-bar"><div class="jauge-fill bg-soft-blue" style="width: 85%;"></div></div>
+              </div>
+            </div>
+            <div class="card">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Projets contributeurs</h4>
+              <div style="display:flex;flex-direction:column;gap:.5rem;">
+                <a href="sae_101.html" class="tag bg-soft-blue text-soft-blue">Projet 1.01 →</a>
+                <a href="sae_104.html" class="tag bg-soft-blue text-soft-blue">Projet 1.04 →</a>
+                <a href="sae_105.html" class="tag bg-soft-blue text-soft-blue">Projet 1.05 →</a>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -143,14 +302,10 @@
 
   <footer>
     <div class="container">
-      <p>Portfolio de <span>Rukiramarigo Yannis</span> — BUT R&amp;T Parcours Cyber — <span>2025-26</span></p>
+      <p>Portfolio de <span>Rukiramarigo Yannis</span> — BUT R&amp;T Parcours Cyber — yannis.rukiramarigo@etudiant.unicaen.fr</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('burger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
-</body>
-</html>
+      document.querySelector('.
