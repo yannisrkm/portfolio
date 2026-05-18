@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 1.04 – Se présenter sur Internet | Portfolio Yannis</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../presentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="active">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html" class="active">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="../bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Accueil</a>
+          <span>›</span>
+          <a href="../index.html#projets">Mes Projets</a>
+          <span>›</span>
+          <span>Projet 1.04</span>
+        </div>
+
+        <h1 class="page-hero-title">Projet 1.04 – Se présenter sur Internet (Création d'un site Web)</h1>
+
+        <div class="hero-tags" style="margin-top: 1rem;">
+          <span class="tag bg-soft-blue text-soft-blue">Projet 1.04</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">RT3 – Outils Informatiques</span>
+          <span class="tag">Semestre 1</span>
+          <span class="tag">Individuel</span>
+        </div>
+      </div>
+
+      <div class="bilan-layout" style="margin-top: 2rem;">
+
+        <div class="bilan-content">
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Contexte &amp; Objectifs</h3>
+            <p>
+              La maîtrise des technologies de l'Internet et du développement Web est une compétence clé pour un technicien R&T, que ce soit pour déployer des interfaces d'administration, concevoir des portails captifs ou documenter des projets.
+            </p>
+            <p>
+              L'objectif de ce projet était de concevoir, développer et héberger un site Web multipages complet en HTML5 et CSS3 "from scratch" (sans l'aide de frameworks lourds de type Bootstrap ou Tailwind). J'ai choisi de développer un site thématique dédié au club du FC Barcelone, mettant en valeur son histoire, son stade, et intégrant une page de présentation personnelle ("À propos").
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Étapes de réalisation &amp; Méthodologie</h3>
+            
+            <p style="margin-bottom: 0.5rem;">Pour mener à bien la création de ce site Web, j'ai adopté une démarche structurée, allant de la gestion de projet au déploiement en ligne :</p>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>Gestion de Projet &amp; Planification :</strong> Utilisation d'un tableau Kanban (Trello) pour lister, prioriser et suivre l'avancement des tâches (HTML, CSS, vérifications W3C, création du README), garantissant le respect de la deadline de livraison.</li>
+              <li><strong>Développement Web (HTML/CSS) :</strong> Conception de la structure sémantique en HTML5 (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>) et mise en forme "Mobile First" via CSS3 (utilisation de Flexbox pour les mises en page et de Media Queries pour le Responsive Design).</li>
+              <li><strong>Expérience Utilisateur (UX/UI) :</strong> Intégration d'animations CSS fluides (Loader de chargement, effets de survol, apparition progressive "Fade-in"), ajout d'icônes vectorielles (Font Awesome) et de typographies personnalisées (Google Fonts).</li>
+              <li><strong>Qualité &amp; Accessibilité :</strong> Audit du code pour assurer le respect des standards du Web (validation W3C) et conformité aux normes d'accessibilité WCAG 2.0 AA.</li>
+              <li><strong>Versionnement &amp; Déploiement :</strong> Utilisation de Git pour le suivi des modifications avec des "commits" porteurs de sens, et mise en ligne publique du site via l'hébergement GitHub Pages.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Problèmes rencontrés &amp; Solutions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème 1 : Désorganisation face à la charge de travail et aux multiples livrables</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Le cahier des charges exigeait la création de plusieurs pages web, la rédaction d'un README détaillé, des validations de normes et le déploiement sur GitHub, ce qui risquait d'entraîner des oublis ou un retard sur le rendu final.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Découpage des tâches via la méthode Kanban (Trello)
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  J'ai mis en place un espace de travail Trello avec un flux de travail structuré ("À faire", "En cours", "Fini"). J'ai isolé chaque étape (ex: "HTML/CSS page histoire", "Vérifications des normes", "Appropriation et cohérence des commits"). Cela m'a permis de visualiser ma progression en temps réel et de valider chaque étape méthodiquement.
+                </p>
+              </div>
+
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-blue);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème 2 : Affichage dégradé des éléments sur smartphones et tablettes</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Lors des premiers tests, les galeries d'images et les blocs de texte se chevauchaient ou dépassaient de l'écran sur les résolutions mobiles, rendant la navigation difficile.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Approche "Mobile First" et utilisation avancée de Flexbox
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  J'ai restructuré mon CSS en intégrant des <em>Media Queries</em> et en exploitant systématiquement <em>Flexbox</em>. J'ai également utilisé la propriété <code>object-fit</code> pour garantir le bon recadrage des images de la galerie sans déformation, quelle que soit la taille de l'écran.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Résultats obtenus &amp; Preuves (Captures)</h3>
+            
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_trello_kanban.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Preuve de la gestion de projet et de la planification</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Cette capture de mon tableau Trello démontre l'achèvement rigoureux de toutes les tâches fixées (codage page par page, norme W3C, rédaction du README, gestion des commits), assurant la livraison du projet dans les temps impartis.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_readme_documentation.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Preuve de la documentation technique sur GitHub</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Extrait du fichier README.md rédigé en Markdown. Il documente professionnellement l'architecture du site, les objectifs pédagogiques, les choix technologiques (Font Awesome, animations) et l'arborescence des fichiers HTML et CSS.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_site_web_fcb.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Preuve du rendu visuel final du site Internet (Hébergement GitHub Pages)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Aperçu visuel de la page d'accueil de mon site web déployé publiquement. Cette capture valide l'intégration de la charte graphique, le respect de la sémantique et la mise en page adaptative.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Autoévaluation</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Ce projet m'a permis de démystifier le développement Web et de comprendre concrètement les mécanismes sous-jacents au fonctionnement d'un site Internet (code source, hébergement, versionnage). L'approche "from scratch" a été déterminante pour consolider mes bases algorithmiques et créatives.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Rigueur dans l'organisation du code (séparation stricte du HTML et des fichiers CSS spécifiques) et excellente maîtrise des outils d'intégration continue (Git, GitHub Pages).</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Pousser l'interactivité côté client en intégrant progressivement du JavaScript pour la gestion du DOM (Document Object Model) au-delà des simples animations CSS.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                État de validation des compétences
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
+                <span>RT3 – Utiliser les systèmes informatiques et outils métiers</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT3 – Lire, modifier et écrire un programme (HTML/CSS)</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.01</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Utiliser les systèmes informatiques et les outils métiers (Git, IDE)</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.02</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Lire, modifier et écrire un programme (Développement Web)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Lien utile</h4>
+            <a href="https://yannisrkm.github.io/SAE.14/" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+              🌐 Visiter le site web du projet
+            </a>
+          </div>
+
+          <div class="card">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Semestre</span>
+                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Modalité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Projet Individuel</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Hébergement</span>
+                <span style="font-weight: 500; color: var(--text-dark);">GitHub Pages</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

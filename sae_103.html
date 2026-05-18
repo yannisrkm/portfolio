@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 1.03 – Dispositifs de Transmission | Portfolio Yannis</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../presentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="active">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html" class="active">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="../bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Accueil</a>
+          <span>›</span>
+          <a href="../index.html#projets">Mes Projets</a>
+          <span>›</span>
+          <span>Projet 1.03</span>
+        </div>
+
+        <h1 class="page-hero-title">Projet 1.03 – Découvrir un dispositif de transmission</h1>
+
+        <div class="hero-tags" style="margin-top: 1rem;">
+          <span class="tag bg-soft-mauve text-soft-mauve">Projet 1.03</span>
+          <span class="tag bg-soft-blue text-soft-blue">RT2 – Connecter</span>
+          <span class="tag">Semestre 1</span>
+          <span class="tag">Groupe (Yannis, Gabriel, Nathan)</span>
+        </div>
+      </div>
+
+      <div class="bilan-layout" style="margin-top: 2rem;">
+
+        <div class="bilan-content">
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Contexte &amp; Objectifs</h3>
+            <p>
+              Le déploiement des infrastructures de télécommunications exige une caractérisation rigoureuse des supports physiques pour valider la conformité des liaisons et diagnostiquer les pannes. Ce projet s'est articulé autour de deux axes de métrologie physique : la caractérisation d'une liaison en fibre optique monomode (Liaison L5) et l'analyse de lignes de transmission en cuivre (câble coaxial RG58 et câble Ethernet).
+            </p>
+            <p>
+              L'objectif était de maîtriser les outils professionnels de mesure afin de calculer les affaiblissements, de déterminer des distances de propagation, et de localiser précisément d'éventuelles ruptures d'impédance.
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Étapes d'analyse &amp; Travaux réalisés</h3>
+            
+            <h4 style="margin-top: 0.5rem; color: var(--text-dark);">Axe 1 : Photométrie sur la Liaison Fibre Optique L5</h4>
+            <p style="margin-bottom: 0.5rem;">L'objectif était d'analyser l'atténuation interne d'un boîtier de test pour en déduire l'architecture matérielle cachée :</p>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem;">
+              <li><strong>Calibrage de référence :</strong> Configuration de la source optique LASER VIAVI OLS-35 (Injecteur LASER) et du photomètre VIAVI OLP-35 pour réaliser le "Zéro" de référence à l'aide de jarretières monomodes nettoyées.</li>
+              <li><strong>Mesure par insertion :</strong> Raccordement de la liaison L5 et relevé d'un affaiblissement total de 12,21 dB.</li>
+              <li><strong>Modélisation mathématique :</strong> Soustraction des pertes standards dues aux connecteurs (2 × 0,5 dB = 1,0 dB) pour isoler la perte de structure nette qui s'élève à 11,21 dB (Calcul effectué : 12,21 dB - 1,0 dB = 11,21 dB).</li>
+              <li><strong>Déduction technique :</strong> Confrontation de la valeur aux seuils théoriques des coupleurs optiques (splitters). La perte de structure interne mesurée (11,21 dB) étant inférieure au seuil théorique d'un coupleur unique 1 vers 16 (qui se situe généralement entre 12 dB et 14 dB), l'analyse nous a permis de conclure à l'impossibilité d'un tel composant. Nous avons donc privilégié l'hypothèse d'une cascade de deux coupleurs inférieurs (par exemple deux coupleurs 1 vers 4 successifs : 6 dB + 6 dB = 12 dB).</li>
+            </ul>
+
+            <h4 style="margin-top: 1rem; color: var(--text-dark);">Axe 2 : Réflectométrie sur Câbles Cuivre (Câble Coaxial RG58 &amp; Câble Ethernet)</h4>
+            <p style="margin-bottom: 0.5rem;">Cette phase visait à caractériser les propriétés de propagation et à localiser les discontinuités physiques :</p>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.3rem;">
+              <li><strong>Analyse Temporelle :</strong> Injection d'un régime impulsionnel dans le câble coaxial RG58 à l'aide d'un Générateur de Fonctions (GBF) et analyse des signaux réfléchis sur un oscilloscope.</li>
+              <li><strong>Calcul de longueur :</strong> Exploitation du temps de parcours relevé entre l'onde incidente et l'onde réfléchie (ΔT = 68 ns) combiné à la vitesse de propagation calculée via la vélocité nominale (NVP de 66% pour le RG58, soit v = c × 0,66 ≈ 1,98 × 10<sup>8</sup> m/s) pour obtenir la longueur géométrique exacte de la ligne.</li>
+              <li><strong>Analyse Fréquentielle (DTF) :</strong> Utilisation de l'analyseur de réseau Siglent SVA1015X en mode <em>Distance To Fault</em> (DTF) pour cartographier le câble Ethernet à paires torsadées et identifier visuellement les écarts d'impédance.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Problèmes rencontrés &amp; Solutions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème 1 : Atténuation anormalement élevée et instable en photométrie</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Lors des premières mesures sur la liaison L5, les valeurs d'affaiblissement fluctuaient et dépassaient les prévisions théoriques maximales, faussant l'identification des coupleurs internes.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Décontamination systématique des férules optiques
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Le problème provenait de micro-poussières présentes sur les connecteurs des jarretières d'injection. L'application rigoureuse du protocole de nettoyage à l'aide du stylo de nettoyage optique sur chaque face de connexion a permis de stabiliser la mesure à son niveau nominal stable de 12,21 dB.
+                </p>
+              </div>
+
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-blue);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème 2 : Difficulté à isoler l'écho de fin de ligne sur l'oscilloscope</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Le signal réfléchi à l'extrémité du câble coaxial RG58 était fortement atténué, rendant la lecture du décalage temporel instable et très imprécise sur l'écran de l'appareil.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Configuration fine du déclenchement (Trigger)
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Nous avons stabilisé la capture en isolant la Voie 2 (CH2) dédiée au signal réfléchi et en basculant le mode de déclenchement en mode Front (Edge) avec un niveau de seuil réglé précisément à -4,88 V. Cette manipulation a permis de figer l'onde de manière nette pour mesurer précisément le ΔT de 68 ns.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Résultats obtenus &amp; Preuves (Captures)</h3>
+            
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_reference_viavi_olp35.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 1 : Calibrage initial et mesure du Zéro de référence (Photométrie)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Cette capture montre l'écran du photomètre VIAVI validant le niveau de référence à 0,00 dB après couplage direct de la source OLS-35, garantissant l'annulation des pertes propres aux câbles d'injection.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_mesure_attenuation_L5.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 2 : Insertion de la liaison inconnue L5 et calcul des affaiblissements de structure</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Enregistrement de la valeur d'insertion stabilisée à 12,21 dB. C'est à partir de cette preuve que notre note de calcul a pu exclure mathématiquement la présence d'un coupleur unique 1 vers 16 en interne.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_reflectometrie_temporelle_siglent.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 3 : Mesure du retard impulsionnel sur oscilloscope pour le câble RG58</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Copie d'écran de l'oscilloscope Siglent affichant le décalage temporel ΔT de 68 ns entre l'onde incidente (CH1) et l'onde réfléchie (CH2), socle de notre calcul de longueur physique de la ligne.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_dtf_analyseur_sva1015x.png
+              </p>
+              <p style="font-size: .8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 4 : Cartographie fréquentielle Distance-To-Fault sur câble Ethernet</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Rapport visuel issu de l'analyseur de réseau Siglent SVA1015X localisant les pics de réflectance fréquentiels correspondant aux extrémités et aux éventuels défauts d'adaptation du câble à paires torsadées.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Autoévaluation</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Ce projet de métrologie m'a confronté aux exigences de précision des mesures physiques de terrain. L'interprétation rigoureuse des graphiques et des bilans de pertes est un atout précieux pour appréhender la qualification d'infrastructures de transmission ou de réseaux de distribution de type GPON.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Esprit logique et analytique lors de l'exploitation des formules de propagation et de la déduction des architectures optiques internes.</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Améliorer l'agilité lors du paramétrage initial des fenêtres de fréquences (Span) sur l'analyseur de réseau pour gagner en rapidité d'exécution.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                État de validation de la compétence
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT2 – Mesure, caractérisation et déploiement des supports de transmission</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.01</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Mesurer et analyser les signaux</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.02</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Caractériser des systèmes de transmission</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.03</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Déployer des supports de transmission</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Semestre</span>
+                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Modalité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Groupe de 3</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Type d'évaluation</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Comptes-rendus d'ingénierie</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

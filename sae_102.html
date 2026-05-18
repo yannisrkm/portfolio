@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 1.02 – Réseaux Informatiques | Portfolio Yannis</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../presentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="active">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html" class="active">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="../bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Accueil</a>
+          <span>›</span>
+          <a href="../index.html#projets">Mes Projets</a>
+          <span>›</span>
+          <span>Projet 1.02</span>
+        </div>
+
+        <h1 class="page-hero-title">Projet 1.02 – S'initier aux réseaux informatiques</h1>
+
+        <div class="hero-tags" style="margin-top: 1rem;">
+          <span class="tag bg-soft-blue text-soft-blue">Projet 1.02</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">RT1 – Administrer</span>
+          <span class="tag">Semestre 1</span>
+          <span class="tag">Mixte (Groupe de 3 &amp; Évaluation Solo)</span>
+        </div>
+      </div>
+
+      <div class="bilan-layout" style="margin-top: 2rem;">
+
+        <div class="bilan-content">
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Contexte &amp; Objectifs</h3>
+            <p>
+              L'administration et la configuration des infrastructures réseaux locales constituent le socle technique du technicien en Réseaux et Télécommunications. Ce projet consistait à concevoir, interconnecter, sécuriser et tester une infrastructure réseau complète intégrant des postes clients et un serveur d'entreprise.
+            </p>
+            <p>
+              L'enjeu principal était de passer de la théorie des architectures réseaux à une implémentation physique et virtuelle concrète, en respectant des contraintes strictes de sécurité et de redondance.
+            </p>
+            <p style="margin-top: 1rem;">
+              <strong style="color:var(--text-dark);">Compétence principale ciblée :</strong> RT1 — Administrer les réseaux et l'Internet.
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Tâches réalisées</h3>
+            <h4 style="margin-top: 0.5rem; color: var(--text-dark);">1. Phase collective (Groupe de 3) : Construction de l'infrastructure</h4>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem;">
+              <li><strong>Architecture Cisco :</strong> Configuration en ligne de commande (CLI) des switchs et routeurs (déploiement de VLANs, isolation des ports non utilisés sur le VLAN natif sécurisé 696).</li>
+              <li><strong>Redondance des liens :</strong> Configuration d'agrégations de liens (LACP) pour optimiser la bande passante et assurer la continuité de service.</li>
+              <li><strong>Sécurisation des accès :</strong> Désactivation des protocoles non sécurisés (Telnet, HTTP) sur l'ensemble des équipements d'interconnexion au profit de protocoles sécurisés.</li>
+              <li><strong>Système de fichiers &amp; Sauvegarde :</strong> Configuration de volumes de stockage sous Linux Debian et mise en œuvre d'une politique de sauvegarde incrémentale automatique inter-disques en exploitant le système de fichiers XFS.</li>
+              <li><strong>Audits et Tests de charge :</strong> Réalisation de mesures de débits de données en TCP et UDP à l'aide de l'outil Iperf3, en faisant varier la charge utile des paquets (500, 1000 et 1500 octets).</li>
+            </ul>
+
+            <h4 style="margin-top: 1rem; color: var(--text-dark);">2. Évaluation individuelle pratique (TP Noté en Solo)</h4>
+            <p>
+              Lors de l'examen technique individuel sur table, j'ai été évalué en totale autonomie sur le déploiement et l'administration d'une infrastructure virtualisée. J'ai pris en charge la création, l'installation et le raccordement réseau d'une machine virtuelle (VM) Linux Debian, validant ainsi ma capacité à interagir seul avec un environnement de virtualisation d'entreprise.
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Résultats obtenus &amp; Preuves (Captures)</h3>
+            <p>
+              L'ensemble des configurations réseau, des politiques de sécurité et des tests de performance ont été validés et consignés avec succès au cours des différentes étapes clés du projet.
+            </p>
+            
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_configuration_cisco_lacp.png
+              </p>
+              <p style="font-size: .85rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 1 : Configuration des infrastructures réseaux et interconnexions (Phase collective)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Cette capture d'écran de la console CLI Cisco montre l'état d'activation des interfaces agrégées via le protocole LACP (Link Aggregation Control Protocol) ainsi que l'affectation stricte des ports dormants vers le VLAN de sécurité 696.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_generation_cles_anssi.png
+              </p>
+              <p style="font-size: .85rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 2 : Sécurisation et durcissement des accès serveurs (Phase collective)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Capture d'écran illustrant la génération et l'implémentation de la paire de clés publiques/privées pour l'accès SSH sur le serveur Debian. La taille et les algorithmes de chiffrement choisis ont été directement justifiés en s'appuyant sur le guide d'hygiène informatique de l'ANSSI étudié lors du projet précédent.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_tp_note_vm_debian.png
+              </p>
+              <p style="font-size: .85rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 3 : Évaluation individuelle pratique (TP Noté en Solo)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Preuve visuelle de l'environnement de virtualisation lors du TP noté. Elle valide la bonne instanciation de la Machine Virtuelle (VM) Debian, l'attribution correcte de ses interfaces réseaux virtuelles et la validation des tests de connectivité (ping/traceroute) vers la passerelle.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_tests_iperf3_sauvegarde_xfs.png
+              </p>
+              <p style="font-size: .85rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                <em>Prise lors de l'Étape 4 : Audits de performance et validation des politiques de stockage (Phase collective)</em>
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Cette capture montre le rapport d'exécution de l'outil Iperf3 mesurant le débit réseau stabilisé sur les liens redondés, ainsi que les logs système confirmant le succès de la sauvegarde incrémentale native via le système de fichiers XFS.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Autoévaluation</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Ce projet complet m'a permis d'appréhender de manière transverse les problématiques de routage, de commutation, de stockage et de virtualisation. L'articulation entre le travail d'équipe et la validation sur table a été très formatrice.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Excellente gestion du stress et maîtrise technique lors du TP noté en solo pour le déploiement de la machine virtuelle sous environnement CLI Debian.</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Optimiser la rapidité d'analyse des tables d'adressage complexes pour fluidifier la phase préparatoire de configuration des équipements Cisco.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                État de validation de la compétence
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT1 – Configuration, administration et sécurisation d'un réseau local</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC11.01</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Maîtriser les lois fondamentales de l'électricité (base)</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC11.02</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Comprendre l'architecture des systèmes numériques</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC11.03</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Configurer les fonctions de base du réseau local</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Semestre</span>
+                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Modalité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Groupe de 3 &amp; Solo</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Type d'évaluation</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Mixte (Dossier + TP sur table)</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
