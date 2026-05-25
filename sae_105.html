@@ -14,7 +14,7 @@
       <li><a href="index.html">Accueil</a></li>
       <li><a href="présentation.html">Présentation</a></li>
       <li class="nav-dropdown">
-        <a href="#" class="active">Mes Projets</a>
+        <a href="projets.html" class="active">Mes Projets</a>
         <ul class="dropdown-menu">
           <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
           <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
@@ -33,67 +33,172 @@
 
       <div class="page-hero">
         <div class="breadcrumb">
-          <a href="index.html">Accueil</a> › <a href="index.html#projets">Mes Projets</a> › <span>Projet 1.05</span>
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="projets.html">Mes Projets</a>
+          <span>›</span>
+          <span>Projet 1.05</span>
         </div>
+
         <h1 class="page-hero-title">Projet 1.05 – Traiter des données et automatisation</h1>
+
         <div class="hero-tags" style="margin-top: 1rem;">
-          <span class="tag bg-soft-blue text-soft-blue">Projet 1.05</span>
-          <span class="tag bg-soft-mauve text-soft-mauve">RT3 — Outils Informatiques</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">Projet 1.05</span>
+          <span class="tag bg-soft-blue text-soft-blue">RT3 – Outils Informatiques</span>
           <span class="tag">Semestre 1</span>
-          <span class="tag">Duo</span>
+          <span class="tag">Projet en Binôme</span>
         </div>
       </div>
 
       <div class="bilan-layout" style="margin-top: 2rem;">
+
         <div class="bilan-content">
+
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Contexte & Objectifs</h3>
+            <h3>Contexte &amp; Objectifs</h3>
             <p>
-              Ce projet avait pour but de découvrir l'interaction avec des APIs REST (OpenStreetMap) en utilisant le langage Python. L'objectif était d'automatiser la récupération de données géographiques en masse, de les traiter, et de générer automatiquement des documents de synthèse aux formats Markdown et HTML.
+              Le traitement automatisé de flux de données massives et l'interaction avec des architectures applicatives distantes constituent des compétences clés pour un technicien R&amp;T. Qu'il s'agisse de collecter des indicateurs de supervision ou d'analyser des journaux d'événements de sécurité, la maîtrise du scripting est indispensable.
+            </p>
+            <p>
+              L'objectif de ce projet était de concevoir un ensemble de scripts en langage Python capables d'interroger des API REST (OpenStreetMap et Overpass), d'extraire et de trier des volumes de données géographiques brutes, puis de générer de manière totalement autonome des fiches documentaires de synthèse exploitables aux formats Markdown et HTML.
             </p>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Étapes de réalisation</h3>
-            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); gap: 0.5rem; display: flex; flex-direction: column;">
-              <li><strong>Interrogation d'API :</strong> Utilisation de la bibliothèque <code>requests</code> pour envoyer des requêtes à l'API Overpass et manipuler les données reçues au format JSON.</li>
-              <li><strong>Automatisation du traitement :</strong> Développement de scripts Python pour parser les attributs des objets OSM (noms, adresses, types de commerces).</li>
-              <li><strong>Génération documentaire :</strong> Création d'un module de conversion automatique (`md_to_html.py`) pour transformer la documentation technique générée en fichiers HTML valides.</li>
-              <li><strong>Traitement d'images :</strong> Utilisation de la bibliothèque <code>Pillow</code> pour manipuler les tuiles cartographiques et ajouter des marqueurs de localisation sur les cartes générées.</li>
+            <h3>Tâches réalisées &amp; Méthodologie</h3>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>Requêtage d'API REST :</strong> Utilisation de la bibliothèque Python <code>requests</code> pour soumettre des requêtes POST structurées en langage OverpassQL vers des serveurs d'interprétation distants afin de récupérer des fichiers de données au format JSON.</li>
+              <li><strong>Parsing et structuration de données :</strong> Analyse et extraction algorithmique des structures de dictionnaires complexes pour isoler les attributs cibles (noms des enseignes, coordonnées de géolocalisation, données d'adresses postales).</li>
+              <li><strong>Génération de cartographie dynamique :</strong> Traitement d'images matricielles avec la bibliothèque <code>Pillow (PIL)</code> pour calculer l'indexation des tuiles cartographiques d'OpenStreetMap, télécharger les portions de cartes correspondantes et y superposer un marqueur visuel précis.</li>
+              <li><strong>Industrialisation documentaire :</strong> Développement d'un module de conversion automatique transformant les structures de données agrégées en fichiers de balisage Markdown, puis en pages web HTML standardisées et stylisées.</li>
             </ul>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Problèmes rencontrés & Solutions</h3>
-            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
-              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius);">
-                <p><strong>Problème :</strong> Difficulté à interpréter les structures complexes des réponses JSON imbriquées provenant de l'API OpenStreetMap.</p>
-                <p><strong>Solution :</strong> Utilisation de techniques d'inspection itératives (boucles sur les dictionnaires et tests de présence de clés avec <code>.get()</code>) pour sécuriser le parsing des données sans erreur lors de l'absence d'attributs spécifiques.</p>
+            <h3>Problèmes rencontrés &amp; Solutions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème : Plantages intermittents des scripts lors du traitement par lots (Batch Processing)</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  L'API Overpass renvoie des fiches d'informations collaboratives dont la structure est hétérogène. L'absence de certaines clés attendues (comme le numéro de téléphone ou la rue) provoquait des erreurs fatales de type <code>KeyError</code>, interrompant brusquement l'exécution du script.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Implémentation d'un mécanisme de parsing défensif
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Nous avons restructuré l'accès aux dictionnaires JSON en remplaçant les appels directs par l'utilisation systématique de la méthode de sécurisation <code>.get()</code> de Python. En définissant des valeurs de substitution par défaut (ex. : "Donnée non renseignée"), le script est devenu parfaitement résilient et capable de traiter l'intégralité du jeu de données sans interruption.
+                </p>
               </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Résultats obtenus &amp; Preuves</h3>
+            <p>
+              L'application de traitement est pleinement opérationnelle. Elle automatise sans intervention humaine la collecte, le calcul statistique et la mise en page visuelle de synthèses territoriales complexes.
+            </p>
+            
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_script_stats.png
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Extrait du code source du script de calcul, mettant en évidence les algorithmes de tri et de classement appliqués sur les structures de données JSON pour extraire les indicateurs de synthèse.
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_fiche_output.png
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Aperçu d'une fiche web HTML générée automatiquement par l'application, affichant les métadonnées propres à un établissement ainsi que sa carte de localisation assemblée via Pillow.
+              </p>
             </div>
           </div>
 
           <div class="card">
             <h3>Autoévaluation</h3>
-            <p>
-              Ce travail en duo m'a permis d'affiner ma pratique de la programmation modulaire en Python. La gestion des erreurs réseau et le traitement des données brutes sont des compétences essentielles pour l'analyse de logs ou de flux de données en cybersécurité.
+            <p style="margin-bottom: 1.5rem;">
+              Ce travail mené en binôme a consolidé mes compétences en programmation structurée et modulaire. Manipuler des structures de données complexes et automatiser des tâches d'ingénierie logicielle constitue un socle d'apprentissage capital, directement transposable à l'automatisation de scripts d'audit ou à l'analyse d'alertes de sécurité.
             </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Bonne maîtrise des requêtes HTTP réseau, gestion rigoureuse de la manipulation d'images matricielles et rigueur dans l'organisation modulaire du code source.</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Optimiser la gestion de l'application en intégrant une infrastructure de persistance des données (de type base de données SQLite) pour éviter le requêtage réseau redondant de l'API.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                État de validation des compétences
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
+                <span>RT3 – Utiliser les systèmes informatiques et outils métiers</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT3 – Lire, modifier et écrire un programme (Python)</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+            </div>
           </div>
+
         </div>
 
         <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.01</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Utiliser les systèmes informatiques et outils métiers (Bibliothèques, IDE)</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.02</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Lire, modifier et écrire un programme (Scripting de données)</span>
+              </div>
+            </div>
+          </div>
+
           <div class="card">
-            <h4>Preuves à ajouter</h4>
-            <p style="font-size: 0.9rem; color: var(--text-med);">Pour finaliser cette page, insérez ici :</p>
-            <ul style="font-size: 0.85rem; color: var(--text-med);">
-              <li><strong>Capture 1 :</strong> Un extrait de votre script `stats.py` montrant la fonction de calcul statistique.</li>
-              <li><strong>Capture 2 :</strong> Le rendu visuel (HTML) d'une fiche générée pour un supermarché à Caen.</li>
-              <li><strong>Capture 3 :</strong> Le terminal montrant l'exécution réussie de la requête Overpass.</li>
-            </ul>
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Semestre</span>
+                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Modalité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Projet en Binôme</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-light);">Technologies</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Python, JSON, PIL</span>
+              </div>
+            </div>
           </div>
         </aside>
+
       </div>
     </div>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
