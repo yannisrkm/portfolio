@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 1.04 – Se présenter sur Internet | Portfolio Yannis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="présentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="projets.html" class="active">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html" class="active">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="projets.html">Mes Projets</a>
+          <span>›</span>
+          <span>Projet 1.04</span>
+        </div>
+
+        <h1 class="page-hero-title">Projet 1.04 – Se présenter sur Internet (Création d'un site Web)</h1>
+
+        <div class="hero-tags" style="margin-top: 1rem;">
+          <span class="tag bg-soft-blue text-soft-blue">Projet 1.04</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">RT3 – Outils Informatiques</span>
+          <span class="tag">Semestre 1</span>
+          <span class="tag">Individuel</span>
+        </div>
+      </div>
+
+      <div class="bilan-layout" style="margin-top: 2rem;">
+
+        <div class="bilan-content">
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Contexte &amp; Objectifs</h3>
+            <p>
+              La maîtrise des technologies de l'Internet et du développement Web est une compétence clé pour un technicien R&amp;T, utile tant pour la publication de documentations techniques que pour le déploiement de portails et d'interfaces d'administration.
+            </p>
+            <p>
+              L'objectif de ce projet était de concevoir, développer et héberger un site Web multipages complet en HTML5 et CSS3 de manière totalement manuscrite, sans utiliser de frameworks graphiques externes. Le thème choisi est le FC Barcelone, structurant des contenus denses relatifs à l'histoire du club, aux offres touristiques et aux infrastructures du stade Spotify Camp Nou.
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Tâches réalisées &amp; Méthodologie</h3>
+            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>Planification Kanban :</strong> Structuration de l'avancement via un tableau de suivi Trello afin de compartimenter le codage, la conformité sémantique et la validation des exigences.</li>
+              <li><strong>Intégration HTML5 &amp; CSS3 :</strong> Écriture d'une structure sémantique claire utilisant les balises structurelles natives du web (header, main, section, footer).</li>
+              <li><strong>Mise en page adaptative :</strong> Implémentation d'une feuille de style fluide exploitant Flexbox et des Media Queries pour garantir un affichage optimal sur smartphone, tablette et ordinateur.</li>
+              <li><strong>Standards et Accessibilité :</strong> Alignement du code sur les normes de validation du W3C et les recommandations d'accessibilité WCAG 2.0 AA.</li>
+              <li><strong>Gestion de versions :</strong> Suivi des modifications sous Git et publication publique du service en ligne à l'aide de l'hébergement GitHub Pages.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Problèmes rencontrés &amp; Solutions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème : Distorsion et mauvaise adaptation des visuels sur les écrans mobiles</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  Lors du passage sur des résolutions réduites, les éléments multimédias de la galerie perdaient leurs proportions initiales ou débordaient des conteneurs parents.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
+                  ⚙️ Solution : Recadrage CSS sémantique et Flexbox responsive
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">
+                  L'intégration de la propriété <code>object-fit</code> a permis de redimensionner dynamiquement les images sans altérer leur ratio d'aspect. L'utilisation conjointe de Flexbox a stabilisé les grilles de présentation sur smartphone.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3>Résultats obtenus &amp; Preuves</h3>
+            <p>
+              Le site web est entièrement déployé et fonctionnel. L'historique d'intégration et l'organisation sont traçables via des outils collaboratifs d'ingénierie numérique.
+            </p>
+            
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_trello_kanban.png
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Visualisation du tableau Trello formalisant l'organisation du projet et la validation successive des livrables (pages de contenu, README, validation des normes).
+              </p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
+                📸 capture_site_web_fcb.png
+              </p>
+              <p style="color:var(--text-med);font-size:.9rem;">
+                Rendu visuel de la page principale déployée sur GitHub Pages, validant la charte graphique et la navigation responsive.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Autoévaluation</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Ce travail individuel a validé ma compréhension des technologies fondamentales du web. L'approche rigoureuse imposée par le versionnage Git et le respect des standards sémantiques constitue un atout précieux pour documenter et concevoir de futurs services informatiques sécurisés.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Rigueur dans l'organisation de l'arborescence, codage sémantique propre et maîtrise des mécanismes d'hébergement Git.</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Approfondir l'interactivité des formulaires en intégrant du scripting côté client (JavaScript) lors des prochaines réalisations.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                État de validation des compétences
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
+                <span>RT3 – Utiliser les systèmes informatiques et outils métiers</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT3 – Lire, modifier et écrire un programme (HTML5/CSS3)</span>
+                <span class="status-dot ok">Validé / Acquis</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.01</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Utiliser les systèmes informatiques et outils métiers (Git, IDE)</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.02</span>
+                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Lire, modifier et écrire un programme (Développement Web)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Lien utile</h4>
+            <a href="https://yannisrkm.github.io/SAE.14/" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+              🌐 Visiter le site web du projet
+            </a>
+          </div>
+
+          <div class="card">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Semestre</span>
+                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Modalité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Projet Individuel</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-light);">Hébergement</span>
+                <span style="font-weight: 500; color: var(--text-dark);">GitHub Pages</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

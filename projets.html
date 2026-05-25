@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Projets | Portfolio Yannis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="présentation.html">Présentation</a></li>
+      <li class="nav-dropdown">
+        <a href="projets.html" class="active">Mes Projets</a>
+        <ul class="dropdown-menu">
+          <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
+          <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
+          <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+        </ul>
+      </li>
+      <li><a href="bilan.html">Bilans</a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+    <section class="grid-bg" style="padding: 4rem 0 2rem 0;">
+      <div class="container">
+        <div class="page-hero" style="border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem;">
+          <div class="breadcrumb" style="font-family: var(--font-mono); font-size: .8rem; color: var(--text-light); margin-bottom: 1rem;">
+            <a href="index.html">Accueil</a> › <span>Mes Projets</span>
+          </div>
+          <h1 class="page-hero-title" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1rem;">
+            Mes Projets
+          </h1>
+          <p class="section-sub" style="color: var(--text-med); max-width: 700px; font-size: 1.05rem;">
+            Découvrez l'ensemble des travaux d'ingénierie et de développement réalisés au cours de ma formation en BUT Réseaux et Télécommunications. Chaque projet représente une mise en situation concrète face à des problématiques métiers spécifiques.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          
+          <a href="sae_101.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve" style="background: var(--soft-mauve-dim);">Projet 1.01</span>
+              <h3>Se sensibiliser à l’hygiène informatique</h3>
+            </div>
+            <p><strong>But :</strong> Sensibiliser aux bonnes pratiques de cybersécurité et aux enjeux de l'hygiène numérique selon les recommandations de l'ANSSI.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Individuel</span>
+              <span class="tag">RT1</span><span class="tag">Cyber1</span>
+            </div>
+          </a>
+
+          <a href="sae_102.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-blue" style="background: var(--soft-blue-dim);">Projet 1.02</span>
+              <h3>S’initier aux réseaux informatiques</h3>
+            </div>
+            <p><strong>But :</strong> Installation de postes clients, administration sous Debian et configuration d'architectures de réseaux locaux commutés et routés.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-blue text-soft-blue">Mixte</span>
+              <span class="tag">RT1</span>
+            </div>
+          </a>
+
+          <a href="sae_103.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve" style="background: var(--soft-mauve-dim);">Projet 1.03</span>
+              <h3>Découvrir un dispositif de transmission</h3>
+            </div>
+            <p><strong>But :</strong> Mesure de signaux physiques, photométrie fibre optique et réflectométrie sur infrastructures de cuivre.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Groupe</span>
+              <span class="tag">RT2</span>
+            </div>
+          </a>
+
+          <a href="sae_104.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-blue" style="background: var(--soft-blue-dim);">Projet 1.04</span>
+              <h3>Se présenter sur Internet</h3>
+            </div>
+            <p><strong>But :</strong> Conception et intégration sémantique d'un site web adaptatif codé manuellement sans framework graphique.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-blue text-soft-blue">Individuel</span>
+              <span class="tag">RT3</span>
+            </div>
+          </a>
+
+          <a href="sae_105.html" class="card sae-card">
+            <div class="sae-card-header">
+              <span class="sae-code text-soft-mauve" style="background: var(--soft-mauve-dim);">Projet 1.05</span>
+              <h3>Traiter des données</h3>
+            </div>
+            <p><strong>But :</strong> Manipulation d'APIs REST, traitement automatisé de flux de données structurées JSON en Python et parsing documentaire.</p>
+            <div class="sae-card-tags">
+              <span class="tag bg-soft-mauve text-soft-mauve">Duo</span>
+              <span class="tag">RT3</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Rukiramarigo Yannis</span> — BUT R&amp;T Cyber — yannis.rukiramarigo@etudiant.unicaen.fr</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
