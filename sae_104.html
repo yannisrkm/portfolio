@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projet 1.04 – Se présenter sur Internet | Portfolio Yannis</title>
+  <title>Projet 1.05 – Traiter des données | Portfolio Yannis</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,8 +19,8 @@
           <li><a href="sae_101.html">Projet 1.01 – Hygiène</a></li>
           <li><a href="sae_102.html">Projet 1.02 – Réseaux</a></li>
           <li><a href="sae_103.html">Projet 1.03 – Transmission</a></li>
-          <li><a href="sae_104.html" class="active">Projet 1.04 – Internet</a></li>
-          <li><a href="sae_105.html">Projet 1.05 – Données</a></li>
+          <li><a href="sae_104.html">Projet 1.04 – Internet</a></li>
+          <li><a href="sae_105.html" class="active">Projet 1.05 – Données</a></li>
         </ul>
       </li>
       <li><a href="bilan.html">Bilans</a></li>
@@ -37,16 +37,16 @@
           <span>›</span>
           <a href="projets.html">Mes Projets</a>
           <span>›</span>
-          <span>Projet 1.04</span>
+          <span>Projet 1.05</span>
         </div>
 
-        <h1 class="page-hero-title">Projet 1.04 – Se présenter sur Internet (Création d'un site Web)</h1>
+        <h1 class="page-hero-title">Projet 1.05 – Traiter des données et automatisation</h1>
 
         <div class="hero-tags" style="margin-top: 1rem;">
-          <span class="tag bg-soft-blue text-soft-blue">Projet 1.04</span>
-          <span class="tag bg-soft-mauve text-soft-mauve">RT3 – Outils Informatiques</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">Projet 1.05</span>
+          <span class="tag bg-soft-blue text-soft-blue">RT3 – Outils Informatiques</span>
           <span class="tag">Semestre 1</span>
-          <span class="tag">Individuel</span>
+          <span class="tag">Projet en Binôme</span>
         </div>
       </div>
 
@@ -55,96 +55,124 @@
         <div class="bilan-content">
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Contexte &amp; Objectifs</h3>
+            <h3>Contexte &amp; Cahier des charges</h3>
             <p>
-              La maîtrise des technologies de l'Internet et du développement Web est une compétence clé pour un technicien R&amp;T, utile tant pour la publication de documentations techniques que pour le déploiement de portails et d'interfaces d'administration.
+              Dans l'environnement d'un administrateur réseaux et sécurité, la manipulation de flux de données de masse (logs de pare-feu, métriques de supervision, inventaires d'infrastructures) nécessite des compétences solides en scripting et en interaction avec des architectures applicatives distantes. 
             </p>
             <p>
-              L'objectif de ce projet était de concevoir, développer et héberger un site Web multipages complet en HTML5 et CSS3 de manière totalement manuscrite, sans utiliser de frameworks graphiques externes. Le thème choisi est le FC Barcelone, structurant des contenus denses relatifs à l'histoire du club, aux offres touristiques et aux infrastructures du stade Spotify Camp Nou.
+              Le <strong>cahier des charges</strong> de ce projet, réalisé en binôme, imposait le développement d'une suite logicielle modulaire en Python 3.11. L'application devait interroger de manière dynamique l'API REST d'OpenStreetMap et d'Overpass, extraire de larges volumes de données géographiques au format JSON (commerces de l'agglomération de Caen), traiter ces structures de données de manière algorithmique, et automatiser la génération de livrables documentaires standardisés aux formats Markdown et HTML.
             </p>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Tâches réalisées &amp; Méthodologie</h3>
-            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><strong>Planification Kanban :</strong> Structuration de l'avancement via un tableau de suivi Trello afin de compartimenter le codage, la conformité sémantique et la validation des exigences.</li>
-              <li><strong>Intégration HTML5 &amp; CSS3 :</strong> Écriture d'une structure sémantique claire utilisant les balises structurelles natives du web (header, main, section, footer).</li>
-              <li><strong>Mise en page adaptative :</strong> Implémentation d'une feuille de style fluide exploitant Flexbox et des Media Queries pour garantir un affichage optimal sur smartphone, tablette et ordinateur.</li>
-              <li><strong>Standards et Accessibilité :</strong> Alignement du code sur les normes de validation du W3C et les recommandations d'accessibilité WCAG 2.0 AA.</li>
-              <li><strong>Gestion de versions :</strong> Suivi des modifications sous Git et publication publique du service en ligne à l'aide de l'hébergement GitHub Pages.</li>
-            </ul>
-          </div>
+            <h3>La Démarche Projet : De l'acquisition à la restitution</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-med);">
+              Pour mener à bien ce projet d'ingénierie logicielle, j'ai structuré mon travail selon une chaîne de traitement séquentielle et modulaire :
+            </p>
 
-          <div class="card" style="margin-bottom: 2rem;">
-            <h3>Problèmes rencontrés &amp; Solutions</h3>
-            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
-              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème : Distorsion et mauvaise adaptation des visuels sur les écrans mobiles</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  Lors du passage sur des résolutions réduites, les éléments multimédias de la galerie perdaient leurs proportions initiales ou débordaient des conteneurs parents.
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
-                  ⚙️ Solution : Recadrage CSS sémantique et Flexbox responsive
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  L'intégration de la propriété <code>object-fit</code> a permis de redimensionner dynamiquement les images sans altérer leur ratio d'aspect. L'utilisation conjointe de Flexbox a stabilisé les grilles de présentation sur smartphone.
-                </p>
-              </div>
+            <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 1 : Interrogation réseau et requêtage d'API REST
+              </p>
+              <p style="font-size: 0.95rem;">
+                <span style="text-decoration: underline;">Action &amp; Apprentissage mobilisé (AC13.01) :</span> J'ai configuré et implémenté l'envoi de requêtes HTTP POST vers le serveur Overpass en écrivant des requêtes ciblées en langage OverpassQL (extraction des nœuds et chemins typés <code>"shop"="supermarket"</code> sur la zone administrative de Caen). Cette action m'a permis d'assimiler les mécanismes d'échange de données client-serveur et la manipulation de protocoles applicatifs.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 2 : Algorithmes de filtrage et traitement statistique
+              </p>
+              <p style="font-size: 0.95rem;">
+                <span style="text-decoration: underline;">Action &amp; Apprentissage mobilisé (AC13.02) :</span> J'ai développé un algorithme de tri et d'extraction dans le module <code>stats.py</code>. En effectuant des boucles itératives sur les structures de dictionnaires imbriquées du fichier JSON reçu, j'ai automatisé le comptage des occurrences par enseigne et calculé leurs proportions relatives afin d'extraire un classement statistique des trois enseignes majeures.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 3 : Traitement d'images matricielles et intégration cartographique
+              </p>
+              <p style="font-size: 0.95rem;">
+                <span style="text-decoration: underline;">Action &amp; Apprentissage mobilisé (AC13.02) :</span> Dans le script <code>fiche_osm.py</code>, j'ai codé une fonction de conversion mathématique pour traduire les coordonnées géographiques (latitude et longitude) en index de tuiles cartographiques selon le standard Slippy Map. À l'aide de la bibliothèque <strong>Pillow (PIL)</strong>, j'ai automatisé le téléchargement du flux binaire de l'image PNG correspondante et l'enregistrement local de la carte de situation.
+              </p>
+            </div>
+
+            <div style="padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 4 : Génération et industrialisation documentaire HTML
+              </p>
+              <p style="font-size: 0.95rem;">
+                <span style="text-decoration: underline;">Action &amp; Apprentissage mobilisé (AC13.01) :</span> J'ai conçu un interpréteur de chaînes de caractères assemblant dynamiquement les données parsées sous forme de syntaxe Markdown standardisée. Enfin, j'ai exploité le module <code>markdown</code> dans le script <code>md_to_html.py</code> pour compiler automatiquement ces fichiers intermédiaires en pages web HTML pures, prêtes à être publiées sur un serveur.
+              </p>
             </div>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Résultats obtenus &amp; Preuves</h3>
-            <p>
-              Le site web est entièrement déployé et fonctionnel. L'historique d'intégration et l'organisation sont traçables via des outils collaboratifs d'ingénierie numérique.
-            </p>
+            <h3>Analyse d'un incident technique &amp; Explication de la trace</h3>
             
-            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
-                📸 Sans titre.png
+            <div style="padding: 1.2rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve); margin-bottom: 1.5rem;">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
+                🚨 Incident analysé : Exception KeyError sur les attributs optionnels du JSON
               </p>
-              <p style="color:var(--text-med);font-size:.9rem;">
-                Visualisation du tableau Trello formalisant l'organisation du projet et la validation successive des livrables (pages de contenu, README, validation des normes).
+              <p style="font-size: 0.95rem; color: var(--text-med);">
+                <strong>Analyse du problème :</strong> Lors des phases de tests de traitement sur des volumes de données élargis, l'application s'interrompait brutalement en levant une exception système fatale (<code>KeyError</code>). Le diagnostic mené à l'aide de la console de débogage a révélé que les objets de la base de données OpenStreetMap, alimentée de façon collaborative, possèdent des structures hétérogènes. Certains commerces ne contenaient pas les métadonnées attendues par mon script (comme la clé <code>"addr:street"</code> ou <code>"phone"</code> dans le sous-dictionnaire <code>"tags"</code>). L'accès direct par indexation (ex. : <code>elem["tags"]["addr:street"]</code>) provoquait le crash de la chaîne d'automatisation.
+              </p>
+              <p style="font-size: 0.95rem; color: var(--text-dark); font-weight: 600; margin-top: 0.75rem;">
+                ⚙️ Résolution technique et remédiation :
+              </p>
+              <p style="font-size: 0.95rem; color: var(--text-med);">
+                Pour pallier cette anomalie structurelle sans exclure ces établissements du traitement, j'ai implémenté une logique de programmation défensive. J'ai banni les accès directs par indexation au profit de la méthode sémantique <code>.get()</code> native de Python. Cette fonction interroge la présence de la clé : si elle existe, elle extrait sa valeur ; si elle est absente, elle injecte une valeur de substitution par défaut (ex. : <code>"Adresse non renseignée"</code>). Cette modification a rendu l'application totalement résiliente face à l'hétérogénéité des flux de données.
               </p>
             </div>
 
-            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
-                📸 image_e7262f.png
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Explication et justification des traces techniques</h4>
+            
+            <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">
+                📸 Trace 1 : capture_parsing_defensif.png
               </p>
-              <p style="color:var(--text-med);font-size:.9rem;">
-                Rendu visuel de la page principale déployée sur GitHub Pages, validant la charte graphique et la navigation responsive.
+              <p style="font-size: 0.9rem; color: var(--text-med); margin-top: 0.25rem;">
+                Cette capture d'écran isole l'implémentation de notre solution dans le script <code>stats.py</code>. On y observe l'utilisation des méthodes <code>.get()</code> sécurisées, fournissant la preuve de l'analyse critique de l'incident et de l'adaptation du code pour garantir la continuité du traitement par lots.
+              </p>
+            </div>
+
+            <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border: 1px solid var(--border);">
+              <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">
+                📸 Trace 2 : capture_output_pillow_html.png
+              </p>
+              <p style="font-size: 0.9rem; color: var(--text-med); margin-top: 0.25rem;">
+                Cette trace présente le livrable final compilé. Elle valide le fonctionnement de l'ensemble de la suite applicative : le document HTML final affiche proprement les métadonnées extraites et intègre parfaitement l'image matricielle de positionnement générée via Pillow, confirmant la réussite de l'automatisation.
               </p>
             </div>
           </div>
 
           <div class="card">
-            <h3>Autoévaluation</h3>
+            <h3>Bilan du Projet</h3>
             <p style="margin-bottom: 1.5rem;">
-              Ce travail individuel a validé ma compréhension des technologies fondamentales du web. L'approche rigoureuse imposée par le versionnage Git et le respect des standards sémantiques constitue un atout précieux pour documenter et concevoir de futurs services informatiques sécurisés.
+              Ce travail collaboratif a structuré ma démarche d'analyste et de développeur. Automatiser des processus d'acquisition et de traitement de données m'a fait prendre conscience de l'importance de concevoir des programmes tolérants aux pannes logiques.
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
               <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Rigueur dans l'organisation de l'arborescence, codage sémantique propre et maîtrise des mécanismes d'hébergement Git.</p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Prise de recul : Acquis majeurs</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">La maîtrise de la manipulation de fichiers de données structurés (JSON), l'exploitation d'APIs tierces via des requêtes HTTP, et la capacité à collaborer efficacement en binôme via une structure modulaire de script.</p>
               </div>
               <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Approfondir l'interactivité des formulaires en intégrant du scripting côté client (JavaScript) lors des prochaines réalisations.</p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Prise de recul : Rétrospective &amp; Perspectives</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Avec le recul, j'intégrerais une gestion de persistance locale des données à l'aide d'une base de données SQLite légère. Cela permettrait de mettre en cache les résultats et d'éviter des requêtes réseau redondantes vers l'API, optimisant ainsi la bande passante et la rapidité d'exécution de l'application.</p>
               </div>
             </div>
 
             <div>
               <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
-                État de validation des compétences
+                Validation des compétences cibles
               </p>
               <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
                 <span>RT3 – Utiliser les systèmes informatiques et outils métiers</span>
                 <span class="status-dot ok">Validé / Acquis</span>
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
-                <span>RT3 – Lire, modifier et écrire un programme (HTML5/CSS3)</span>
+                <span>RT3 – Lire, modifier et écrire un programme (Python)</span>
                 <span class="status-dot ok">Validé / Acquis</span>
               </div>
             </div>
@@ -154,40 +182,46 @@
 
         <aside>
           <div class="card" style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
-            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.01</span>
-                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Utiliser les systèmes informatiques et outils métiers (Git, IDE)</span>
-              </div>
-              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                <span class="tag bg-soft-blue text-soft-blue" style="font-size: 0.65rem;">AC13.02</span>
-                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Lire, modifier et écrire un programme (Développement Web)</span>
-              </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              📚 Vocabulaire Technique
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; color: var(--text-med);">
+              <p><strong>API REST :</strong> Interface de programmation applicative permettant l'échange de données entre applications via des requêtes HTTP standards.</p>
+              <p><strong>JSON :</strong> Format de données textuel léger et structuré, basé sur des paires clés-valeurs, universellement utilisé pour les API.</p>
+              <p><strong>Parsing :</strong> Action d'analyser syntaxiquement une chaîne de caractères ou un fichier brut pour en extraire des informations exploitables.</p>
+              <p><strong>Traitement Matriciel :</strong> Manipulation directe des grilles de pixels composant une image numérique (opérations opérées via Pillow).</p>
             </div>
           </div>
 
           <div class="card" style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Lien utile</h4>
-            <a href="https://yannisrkm.github.io/SAE.14/" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem;">
-              🌐 Visiter le site web du projet
-            </a>
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              🛠️ Technologies &amp; Outils
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="tag" style="width: 100%; text-align: center;">Python 3.11</span>
+              <span class="tag" style="width: 100%; text-align: center;">Overpass Query Language</span>
+              <span class="tag" style="width: 100%; text-align: center;">Bibliothèque Pillow (PIL)</span>
+              <span class="tag" style="width: 100%; text-align: center;">Module Markdown Parser</span>
+              <span class="tag" style="width: 100%; text-align: center;">Git / GitHub CLI</span>
+            </div>
           </div>
 
           <div class="card">
-            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark);">
+              Fiche Synthétique
+            </h4>
             <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="color: var(--text-light);">Semestre</span>
-                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+                <span style="color: var(--text-light);">Environnement</span>
+                <span style="font-weight: 500; color: var(--text-dark);">GNU/Linux CLI</span>
               </div>
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="color: var(--text-light);">Modalité</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Projet Individuel</span>
+                <span style="color: var(--text-light);">Données d'entrée</span>
+                <span style="font-weight: 500; color: var(--text-dark);">JSON REST Flux</span>
               </div>
               <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-light);">Hébergement</span>
-                <span style="font-weight: 500; color: var(--text-dark);">GitHub Pages</span>
+                <span style="color: var(--text-light);">Livrable</span>
+                <span style="font-weight: 500; color: var(--text-dark);">HTML5 Document</span>
               </div>
             </div>
           </div>
@@ -199,7 +233,7 @@
 
   <footer>
     <div class="container">
-      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours-Cyber</p>
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
     </div>
   </footer>
 
