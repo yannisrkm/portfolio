@@ -118,11 +118,16 @@
                 <p style="font-size: 0.9rem; color: var(--text-med);">J'ai pris du recul sur mon utilisation de la CLI. En consultant rapidement les manuels système (<code>man useradd</code>), j'ai optimisé mon approche en générant les identifiants, les répertoires personnels et les affectations de groupes en <strong>une seule ligne de commande complexe</strong> grâce aux arguments paramétrés (flags). Cela a considérablement accéléré mon flux de travail et m'a permis de finaliser l'épreuve dans les temps.</p>
 
                 <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
-                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Administration CLI</p>
+                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">💻 Trace technique : Simulation d'administration CLI</p>
                   
-                  <img src="capture_debian_cli.png" alt="Commandes Linux Debian" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
-                  
-                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Cette trace de mon terminal Debian démontre ma capacité à optimiser l'administration système en concaténant des arguments d'exécution avancés directement dans l'interface CLI.</p>
+                  <div style="margin-top: 0.5rem; padding: 1rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 6px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85rem; line-height: 1.5; color: #a7f3d0; overflow-x: auto;">
+                    <span style="color: #f87171;">root@srv-debian:</span><span style="color: #60a5fa;">~#</span> useradd -m -s /bin/bash -G sudo,admin_reseau yannis_rkm<br>
+                    <span style="color: #f87171;">root@srv-debian:</span><span style="color: #60a5fa;">~#</span> echo 'yannis_rkm:S3cur!t3_2026' | chpasswd<br>
+                    <span style="color: #f87171;">root@srv-debian:</span><span style="color: #60a5fa;">~#</span> id yannis_rkm<br>
+                    <span style="color: #94a3b8;">uid=1001(yannis_rkm) gid=1001(yannis_rkm) groupes=1001(yannis_rkm),27(sudo),1002(admin_reseau)</span>
+                  </div>
+
+                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.5rem;">Cette reconstitution de mon terminal Debian démontre ma capacité à optimiser l'administration système en concaténant des arguments d'exécution avancés (fichiers homes, shell spécifique, groupes secondaires) directement dans l'interface CLI pour un gain de temps maximal.</p>
                 </div>
               </div>
             </div>
