@@ -46,7 +46,7 @@
           <span class="tag bg-soft-blue text-soft-blue">Projet 1.02</span>
           <span class="tag bg-soft-mauve text-soft-mauve">RT1 – Administrer les réseaux</span>
           <span class="tag">Semestre 1</span>
-          <span class="tag">Mixte (Solo &amp; Groupe)</span>
+          <span class="tag">Mixte (Groupe &amp; Individuel)</span>
         </div>
       </div>
 
@@ -55,52 +55,183 @@
         <div class="bilan-content">
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Contexte &amp; Objectifs</h3>
+            <h3>Contexte &amp; Cahier des charges</h3>
             <p>
-              L'initialisation aux architectures de réseaux locaux commutés et routés constitue le socle technique indispensable pour un technicien en Réseaux et Télécommunications. Comprendre le transit des flux de données et savoir segmenter un réseau sont des compétences fondamentales pour assurer la disponibilité et la sécurité d'une infrastructure.
+              L'initialisation aux architectures de réseaux locaux commutés et routés constitue le socle technique indispensable pour un technicien R&amp;T. Le <strong>cahier des charges</strong> de ce projet imposait le déploiement sécurisé d'une infrastructure complète, incluant la configuration d'équipements actifs (Cisco) et l'administration système sous Linux Debian.
             </p>
             <p>
-              L'objectif de ce projet était de concevoir, configurer et interconnecter une infrastructure réseau locale multi-sites, en associant de l'administration système sous environnement Linux et de la configuration matérielle d'équipements actifs de cœur de réseau.
+              Ce projet s'est déroulé en deux temps : une phase de conception architecturale en groupe où j'avais la charge exclusive de la configuration du routeur de bordure, et une phase d'évaluation individuelle pratique (TP noté) axée sur la maîtrise en ligne de commande (CLI) de l'environnement Linux, le tout ponctué par un examen théorique certifiant (CCNA).
             </p>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Tâches réalisées &amp; Méthodologie</h3>
-            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><strong>Configuration Cisco IOS :</strong> Paramétrage complet de commutateurs et de routeurs en ligne de commande (CLI). Implémentation de topologies virtuelles segmentées (VLANs), d'agrégations de liens physiques via le protocole LACP, et déploiement de règles de routage de base.</li>
-              <li><strong>Administration Système Linux :</strong> Déploiement et configuration de serveurs et de postes clients sous l'environnement Linux Debian. Utilisation exclusive de l'interface en ligne de commande pour la gestion des services réseaux.</li>
-              <li><strong>Environnement de Virtualisation :</strong> Maquettage de l'infrastructure logicielle et simulation des nœuds applicatifs à l'aide d'outils de virtualisation professionnels (VirtualBox / Proxmox).</li>
-              <li><strong>Planification de l'infrastructure :</strong> Calcul et répartition de plans d'adressage IP optimisés pour compartimenter efficacement les différents services de l'architecture.</li>
-            </ul>
-          </div>
+            <h3>Démarche de production : De la conception au routage</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-med);">
+              La réalisation de cette infrastructure a nécessité une division stricte des tâches et une appropriation rigoureuse des commandes matérielles.
+            </p>
 
-          <div class="card" style="margin-bottom: 2rem;">
-            <h3>Problèmes rencontrés &amp; Solutions</h3>
-            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 1 : Planification et Travail Collaboratif
+              </p>
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC11.02) :</span> Comprendre l'architecture des systèmes numériques. Bien que le travail en groupe soit essentiel pour la cohérence du plan d'adressage IP et l'interconnexion physique, j'ai assumé la responsabilité individuelle du paramétrage du routeur principal. L'objectif était d'assurer la passerelle entre notre réseau local (switch de cœur de réseau) et l'extérieur (box internet).
+              </p>
+            </div>
+
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 2 : Configuration Cisco IOS et Routage Inter-VLAN
+              </p>
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC11.03) :</span> Configurer les fonctions de base du réseau local. J'ai sécurisé le routeur (mots de passe chiffrés, accès SSH) et configuré les interfaces physiques de transit.
+              </p>
+
               <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème : Rupture de connectivité et boucles de commutation lors de l'agrégation de liens</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  Lors de l'interconnexion de commutateurs redondants pour augmenter la bande passante, des conflits de paquets ont provoqué des pertes de paquets massives et rendu l'infrastructure instable.
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
-                  ⚙️ Solution : Analyse des interfaces via les commandes de diagnostic IOS
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  L'utilisation méthodique des commandes d'inspection de l'OS Cisco (<code>show ip interface brief</code>, <code>show vlan</code>) combinée à une analyse point par point du protocole Spanning Tree (STP) a permis d'isoler le port défectueux et de stabiliser l'agrégation de liens LACP.
-                </p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Analyse d'incident : Échec du routage vers les sous-réseaux (VLANs)</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> Mon objectif initial était simplement de relier matériellement nos commutateurs au routeur. Cependant, lors des tests de connectivité (Ping), le routeur n'arrivait pas à joindre les machines situées dans les différents VLANs créés par mes camarades. Les paquets étaient systématiquement rejetés.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Analyse et remédiation technique :</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">En inspectant la table de routage, j'ai compris que le routeur ignorait l'existence logique des VLANs (ex: 192.16.200.0/24) gérés par le switch de niveau 3 (IP: 10.0.0.1). Pour remédier à cela, j'ai injecté une série de routes statiques en CLI (<code>ip route 192.16.200.0 255.255.255.0 10.0.0.1</code>). Cette action a permis d'instruire le routeur sur le chemin exact à emprunter pour chaque trame, rétablissant la connectivité totale.</p>
+                
+                <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
+                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Résolution du routage IP</p>
+                  
+                  <img src="capture_routes_cisco.png" alt="Configuration des routes statiques" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                  
+                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Cette capture de mon fichier de configuration met en évidence l'implémentation des routes statiques pointant vers la passerelle du Switch L3 (10.0.0.1), prouvant la résolution du problème d'adressage logique.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 3 : Évaluation pratique individuelle sous Linux Debian
+              </p>
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC11.02) :</span> Interagir avec le système d'exploitation. La seconde phase du projet était un TP noté individuel exigeant l'administration d'un système Debian uniquement en lignes de commandes (création d'identifiants, gestion des privilèges root, gestion des groupes).
+              </p>
+
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Analyse d'incident : Lenteur d'exécution sur la gestion des utilisateurs</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> Soumis à une contrainte de temps stricte lors de l'examen, ma méthode initiale de création d'utilisateurs via des scripts interactifs bloquait ma progression. Je perdais un temps précieux à répondre manuellement aux invites du système (mots de passe, informations de profil) pour chaque compte.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Analyse et remédiation technique :</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">J'ai pris du recul sur mon utilisation de la CLI. En consultant rapidement les manuels système (<code>man useradd</code>), j'ai optimisé mon approche en générant les identifiants, les répertoires personnels et les affectations de groupes en <strong>une seule ligne de commande complexe</strong> grâce aux arguments paramétrés (flags). Cela a considérablement accéléré mon flux de travail et m'a permis de finaliser l'épreuve dans les temps.</p>
+
+                <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
+                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Administration CLI</p>
+                  
+                  <img src="capture_debian_cli.png" alt="Commandes Linux Debian" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                  
+                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Cette trace de mon terminal Debian démontre ma capacité à optimiser l'administration système en concaténant des arguments d'exécution avancés directement dans l'interface CLI.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 4 : Validation théorique (Examen CCNA)
+              </p>
+              <p style="font-size: 0.95rem;">
+                Le projet s'est conclu par un examen final en salle sur la plateforme Cisco NetAcad (CCNA - Présentation des réseaux). Cette évaluation sous format QCM a permis de valider officiellement mon apprentissage des couches du modèle OSI, de l'adressage IPv4/IPv6 et des concepts de commutation Ethernet abordés tout au long du module.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <h3>Bilan du Projet &amp; Prise de recul</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Ce projet mixte a renforcé ma polyvalence. Il m'a appris que la configuration d'un équipement de cœur de réseau exige une compréhension globale de la topologie logique (comme les VLANs gérés par mes camarades), et que l'efficacité sous Linux repose sur la maîtrise approfondie des arguments en ligne de commande.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Compétences consolidées</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Implémentation de tables de routage statique sous Cisco IOS, administration accélérée des utilisateurs sous Linux Debian, et validation théorique des protocoles via l'examen CCNA.</p>
+              </div>
+              <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Évolution des pratiques</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">À l'avenir, je systématiserai l'utilisation de protocoles de routage dynamique (comme OSPF) pour éviter la saisie manuelle et chronophage des routes statiques lors de l'ajout de nouveaux sous-réseaux.</p>
+              </div>
+            </div>
+
+            <div>
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                Validation des apprentissages finaux
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
+                <span>RT1 – Configurer les fonctions de base du réseau local</span>
+                <span class="status-dot ok">Acquis</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
+                <span>RT1 – Comprendre l'architecture des systèmes numériques</span>
+                <span class="status-dot ok">Acquis</span>
               </div>
             </div>
           </div>
 
-          <div class="card" style="margin-bottom: 2rem;">
-            <h3>Résultats obtenus &amp; Preuves</h3>
-            <p>
-              L'infrastructure réseau simulée est entièrement opérationnelle, permettant le routage fluide et sécurisé des paquets d'un VLAN à un autre.
-            </p>
-            
-            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
-                📸 capture_architecture_reseau.png
-              </p>
-              <p style="color:var(--text-med);font-size:.9rem;">
-                Sch
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              📚 Vocabulaire Technique
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; color: var(--text-med);">
+              <p><strong>Route Statique :</strong> Règle de routage inscrite manuellement par l'administrateur dans la table d'un routeur pour forcer un chemin de transit.</p>
+              <p><strong>CLI (Command Line Interface) :</strong> Interface textuelle permettant d'interagir directement avec le noyau d'un OS (Cisco IOS ou Linux).</p>
+              <p><strong>VLAN (Virtual LAN) :</strong> Segmentation logique d'un réseau physique pour isoler les domaines de diffusion.</p>
+              <p><strong>Passerelle (Gateway) :</strong> Point d'arrêt réseau (souvent une adresse IP de routeur) qui sert de porte de sortie vers d'autres réseaux.</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              🛠️ Technologies &amp; Outils
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="tag" style="width: 100%; text-align: center;">Routeurs &amp; Switchs Cisco</span>
+              <span class="tag" style="width: 100%; text-align: center;">Système Cisco IOS</span>
+              <span class="tag" style="width: 100%; text-align: center;">Linux Debian (CLI)</span>
+              <span class="tag" style="width: 100%; text-align: center;">Cisco Packet Tracer</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark);">
+              Fiche Synthétique
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Examen Final</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Certification CCNA</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-light);">Épreuve Pratique</span>
+                <span style="font-weight: 500; color: var(--text-dark);">TP Noté (Debian)</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-light);">Responsabilité</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Routeur de bordure</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
