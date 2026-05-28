@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="nav-logo">PORTFOLIO<span>.</span></a>
     <ul class="nav-links">
@@ -29,11 +28,9 @@
     <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- MAIN -->
   <main>
     <div class="container">
 
-      <!-- HERO DE LA PAGE -->
       <div class="page-hero">
         <div class="breadcrumb">
           <a href="index.html">Accueil</a>
@@ -53,110 +50,108 @@
         </div>
       </div>
 
-      <!-- CONTENU PRINCIPAL -->
       <div class="bilan-layout" style="margin-top: 2rem;">
 
-        <!-- Colonne de gauche (Contenu) -->
         <div class="bilan-content">
 
-          <!-- CONTEXTE ET CAHIER DES CHARGES -->
           <div class="card" style="margin-bottom: 2rem;">
             <h3>Contexte &amp; Cahier des charges</h3>
             <p>
-              Le traitement automatisé de flux de données massives et l'interaction avec des architectures applicatives distantes constituent des compétences clés pour un technicien R&amp;T. Qu'il s'agisse de collecter des indicateurs de supervision ou d'analyser des journaux d'événements de sécurité, la maîtrise du scripting est indispensable.
+              Dans l'écosystème numérique actuel, la capacité à extraire, structurer et interpréter des flux de données brutes est une compétence transversale capitale pour un administrateur systèmes et réseaux (analyse de logs, cartographie, automatisation de reportings).
             </p>
             <p>
-              Le <strong>cahier des charges</strong> imposait de concevoir, en binôme, un ensemble de scripts en langage Python. Notre mission : interroger des API REST (OpenStreetMap et Overpass), extraire et trier des volumes de données géographiques brutes au format JSON, et générer de manière totalement autonome des fiches documentaires de synthèse exploitables aux formats Markdown et HTML.
+              Réalisé en binôme, ce projet imposait le développement modulaire d'une application en Python. Le <strong>cahier des charges</strong> exigeait d'interroger dynamiquement les API d'OpenStreetMap (OSM) et Overpass, d'extraire des bases de données géographiques au format JSON (ciblant les supermarchés de l'agglomération de Caen), de générer des statistiques d'occurrence, puis d'automatiser la création de fiches de synthèse web (HTML) incluant des tuiles cartographiques.
             </p>
           </div>
 
-          <!-- LA DÉMARCHE ETAPE PAR ETAPE -->
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Démarche de production : De l'acquisition à la restitution</h3>
+            <h3>Démarche de production : De l'acquisition à la restitution HTML</h3>
             <p style="margin-bottom: 1.5rem; color: var(--text-med);">
-              Pour mener à bien ce projet d'ingénierie logicielle, nous avons structuré notre travail selon une chaîne de traitement séquentielle et modulaire.
+              L'architecture de notre solution s'est appuyée sur la segmentation du code source en plusieurs modules spécialisés (requêtage, traitement d'image, statistiques, conversion).
             </p>
 
-            <!-- ETAPE 1 -->
             <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
-                Étape 1 : Requêtage d'API et extraction de données
+                Étape 1 : Requêtage réseau et extraction OverpassQL
               </p>
               <p style="font-size: 0.95rem; margin-bottom: 1rem;">
-                <span style="text-decoration: underline;">Apprentissage mobilisé (AC13.01) :</span> Utiliser les systèmes informatiques et outils métiers. Nous avons utilisé la bibliothèque <code>requests</code> de Python pour formuler des requêtes HTTP en langage OverpassQL, afin de cibler et récupérer les structures JSON correspondant aux commerces de l'agglomération étudiée.
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC13.01) :</span> Utiliser les bibliothèques logicielles. À l'aide de la bibliothèque <code>requests</code>, j'ai configuré l'envoi de requêtes HTTP ciblant les points de terminaison des API OSM et Overpass. La requête rédigée en langage OverpassQL filtrait spécifiquement les nœuds (nodes) portant des tags précis pour en extraire la donnée brute.
               </p>
             </div>
 
-            <!-- ETAPE 2 ET PROBLEME -->
             <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
-                Étape 2 : Parsing des données JSON et Gestion des erreurs
+                Étape 2 : Parsing JSON et Analyse Statistique
               </p>
               <p style="font-size: 0.95rem; margin-bottom: 1rem;">
-                <span style="text-decoration: underline;">Apprentissage mobilisé (AC13.02) :</span> Lire, modifier et écrire un programme. Il s'agissait de parcourir algorithmiquement les dictionnaires récupérés pour isoler les coordonnées et les attributs de chaque nœud géographique.
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC13.02) :</span> Lire et modifier des structures de données. J'ai conçu des fonctions pour itérer sur les dictionnaires JSON retournés par le serveur, afin d'y récupérer les coordonnées GPS et de générer un classement statistique d'occurrences.
               </p>
 
               <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Analyse d'incident : Exception "KeyError" et arrêt du traitement par lots</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> Lors du traitement de larges volumes de données, notre script s'interrompait brutalement (crash). Les bases de données OpenStreetMap étant collaboratives, leur structure est hétérogène : certains commerces n'avaient pas de numéro de téléphone ou de nom de rue renseigné. En tentant d'accéder directement à ces clés inexistantes (ex: <code>element['tags']['phone']</code>), Python levait une erreur fatale <code>KeyError</code>.</p>
-                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Analyse et remédiation technique :</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Pour rendre notre code résilient face à l'incertitude des données externes, nous avons implémenté une logique de programmation défensive. Nous avons remplacé les appels directs par l'utilisation de la méthode sécurisée <code>.get()</code>, qui permet de définir une valeur de substitution (fallback) si la clé est absente (ex: <code>"Non renseigné"</code>). Le script a ainsi pu traiter 100% des requêtes sans la moindre interruption.</p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Incident n°1 : Interruption du script due aux métadonnées hétérogènes</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> Lors de la phase de test, notre script s'est brutalement interrompu avec une exception système <code>KeyError</code>. La base OpenStreetMap étant collaborative, sa structure est incomplète : certains points recensés ne possédaient pas les clés de dictionnaire attendues (comme la ville ou l'adresse). L'appel direct d'index sur une clé inexistante provoquait le crash de l'application.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Remédiation par programmation défensive :</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Pour garantir la résilience de l'application, nous avons remplacé l'indexation directe par la méthode sémantique <code>.get()</code> native de Python. Cette approche permet de tenter l'extraction de la donnée, et en cas d'absence, d'injecter automatiquement une valeur de substitution sécurisée (ex: "Ville non renseignée") sans déclencher d'erreur fatale.</p>
                 
                 <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
-                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-black); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Programmation défensive</p>
+                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Script de Parsing sécurisé</p>
                   
-                  <img src="capture_script_api.png" alt="Script Python - Gestion des erreurs" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                  <img src="capture_script_api.png" alt="Script Python montrant la méthode .get" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
                   
-                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Cette capture de notre code source démontre la remédiation apportée au niveau du dictionnaire Python, garantissant la stabilité du parsing des données JSON.</p>
+                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">L'analyse de ce bloc issu de notre fichier <code>stats.py</code> objective la remédiation. L'intégration de la méthode <code>.get()</code> pour les attributs d'adresse prouve l'adaptation du code source aux contraintes d'une API externe imparfaite.</p>
                 </div>
               </div>
             </div>
 
-            <!-- ETAPE 3 -->
             <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
-                Étape 3 : Traitement d'images matricielles
+                Étape 3 : Cartographie, traitement matriciel (Pillow) et Sécurité Réseau
               </p>
               <p style="font-size: 0.95rem; margin-bottom: 1rem;">
-                <span style="text-decoration: underline;">Apprentissage mobilisé (AC13.02) :</span> À l'aide de la bibliothèque <strong>Pillow (PIL)</strong>, nous avons développé des fonctions mathématiques pour indexer les tuiles cartographiques, télécharger les portions d'images requises, et y superposer un marqueur visuel aux coordonnées GPS exactes du lieu.
+                L'un des défis majeurs a été de traduire les coordonnées GPS en un système de tuiles cartographiques exploitables. Dans le module <code>fiche_osm.py</code>, nous avons programmé une fonction mathématique de conversion permettant d'indexer précisément la carte visée. L'image PNG résultante est alors téléchargée et traitée en mémoire tampon (BytesIO) grâce à la bibliothèque Pillow (PIL).
               </p>
+
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Incident n°2 : Blocage par le pare-feu du serveur (Erreur 403 Forbidden)</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> Lors de la génération des cartes, le serveur d'images d'OpenStreetMap rejetait systématiquement nos requêtes en renvoyant une erreur HTTP <code>403 Access Blocked</code>. En effet, l'API possède des sécurités anti-bots et détectait que la requête provenait du module <code>requests</code> de Python plutôt que d'un véritable utilisateur.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Contournement réseau via l'en-tête HTTP :</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Pour résoudre ce blocage, j'ai analysé la structure de la trame HTTP. J'ai injecté un dictionnaire <code>headers</code> dans notre requête Python contenant un <strong>User-Agent</strong> usurpé (<code>Mozilla/5.0 Windows NT 10.0</code>). Cette manipulation a permis de faire passer notre script pour un navigateur web humain classique, contournant ainsi le pare-feu et rétablissant le téléchargement des cartes.</p>
+              </div>
             </div>
 
-            <!-- ETAPE 4 -->
             <div style="padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
-                Étape 4 : Industrialisation documentaire
+                Étape 4 : Industrialisation et Compilation HTML
               </p>
               <p style="font-size: 0.95rem; margin-bottom: 1rem;">
-                Enfin, notre script consolide les textes extraits et l'image générée en instanciant un fichier Markdown, immédiatement converti en une page web HTML standardisée via le module <code>markdown</code>.
+                La finalisation du pipeline repose sur l'assemblage dynamique des données textuelles, statistiques et cartographiques au sein d'un fichier Markdown. Ce dernier est passé en paramètre de notre script de conversion qui génère instantanément la fiche web finale.
               </p>
 
-              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border: 1px solid var(--border);">
-                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Trace de rendu : Fiche générée automatiquement</p>
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border: 1px solid var(--border); text-align: center;">
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase; text-align: left;">📸 Preuve technique : Rendu HTML final</p>
                 
-                <img src="capture_fiche_osm.png" alt="Rendu final HTML de la fiche" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                <img src="capture_output_html.png" alt="Rendu final HTML de la fiche avec la carte" style="max-width: 350px; width: 100%; border-radius: 8px; margin: 1.5rem auto 1rem; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: block;" />
 
-                <p style="font-size: 0.9rem; color: var(--text-med); margin-top: 0.25rem;">Cette capture du livrable final valide le fonctionnement complet du pipeline : de la collecte brute à la structuration visuelle du document HTML.</p>
+                <p style="font-size: 0.9rem; color: var(--text-med); margin-top: 0.5rem; text-align: left;">Cette capture du livrable final démontre la réussite de l'automatisation de bout en bout : les informations de l'API (nœuds, tags) et le traitement d'image de la tuile cartographique (suite au contournement du User-Agent) sont correctement instanciés dans le balisage web.</p>
               </div>
             </div>
 
           </div>
 
-          <!-- BILAN DE LA SAE -->
           <div class="card">
             <h3>Bilan du Projet &amp; Prise de recul</h3>
             <p style="margin-bottom: 1.5rem;">
-              Ce travail mené en binôme a consolidé mes compétences en développement logiciel. Manipuler des structures de données complexes et automatiser des processus m'a fait prendre conscience de l'importance de concevoir des programmes tolérants aux erreurs.
+              Ce développement collaboratif m'a conforté dans l'exigence imposée par le langage Python, particulièrement lors de l'interaction avec des services distants dont nous ne maîtrisons pas la sécurité réseau (erreurs 403) ni la qualité des données de sortie (KeyError).
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
               <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
                 <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Compétences consolidées</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">La maîtrise des requêtes HTTP (API), l'exploitation de la bibliothèque Pillow pour la manipulation d'images matricielles, et la gestion rigoureuse des exceptions en langage Python.</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Maîtrise complète des mécanismes de requêtes HTTP, de l'usurpation d'en-têtes (User-Agent), du parcours algorithmique de dictionnaires JSON, et de la manipulation d'images matricielles.</p>
               </div>
               <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
                 <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Évolution des pratiques</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Si je devais faire évoluer cette application, j'y intégrerais un système de base de données local (SQLite) afin de mettre les réponses de l'API en cache, ce qui éviterait de surcharger le réseau lors des exécutions successives du script.</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Pour optimiser cette application, j'y intégrerais à l'avenir un mécanisme de persistance locale (base de données SQLite) afin de conserver en cache les réponses de l'API et éviter de solliciter inutilement les serveurs externes.</p>
               </div>
             </div>
 
@@ -177,51 +172,47 @@
 
         </div>
 
-        <!-- COLONNE DE DROITE : CADRES REQUIS (Sidebars) -->
         <aside>
-          <!-- CADRE VOCABULAIRE TECHNIQUE -->
           <div class="card" style="margin-bottom: 1.5rem;">
             <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
               📚 Vocabulaire Technique
             </h4>
             <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; color: var(--text-med);">
-              <p><strong>API REST :</strong> Interface permettant à un programme de communiquer et d'échanger des données avec un serveur via des requêtes HTTP.</p>
-              <p><strong>JSON :</strong> Format de données textuel léger, basé sur des paires clés-valeurs, universellement utilisé pour structurer les réponses d'API.</p>
-              <p><strong>Parsing :</strong> Action d'analyser syntaxiquement un flux de données brutes pour en extraire des variables exploitables par le code.</p>
-              <p><strong>Programmation Défensive :</strong> Pratique consistant à anticiper et traiter les cas d'erreurs (données manquantes, crashs potentiels) pour garantir la stabilité d'un script.</p>
+              <p><strong>API REST :</strong> Interface de programmation permettant l'échange structuré de données entre applications web via le protocole HTTP.</p>
+              <p><strong>User-Agent :</strong> En-tête HTTP d'une requête réseau permettant d'identifier le logiciel ou le navigateur utilisé par le client.</p>
+              <p><strong>JSON :</strong> Format textuel universel, structuré en paires clés-valeurs, massivement utilisé par les serveurs pour renvoyer des données.</p>
+              <p><strong>Programmation Défensive :</strong> Pratique consistant à anticiper et traiter les cas d'erreurs pour garantir la stabilité d'un script.</p>
             </div>
           </div>
 
-          <!-- CADRE TECHNOLOGIES & OUTILS -->
           <div class="card" style="margin-bottom: 1.5rem;">
             <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
               🛠️ Technologies &amp; Outils
             </h4>
             <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
               <span class="tag" style="width: 100%; text-align: center;">Python 3</span>
-              <span class="tag" style="width: 100%; text-align: center;">Overpass API &amp; OSM</span>
-              <span class="tag" style="width: 100%; text-align: center;">Bibliothèque Pillow (PIL)</span>
-              <span class="tag" style="width: 100%; text-align: center;">VS Code &amp; Module Markdown</span>
+              <span class="tag" style="width: 100%; text-align: center;">API Overpass (OSM)</span>
+              <span class="tag" style="width: 100%; text-align: center;">Module Pillow (Traitement image)</span>
+              <span class="tag" style="width: 100%; text-align: center;">Module Requests (HTTP POST)</span>
             </div>
           </div>
 
-          <!-- COMPLEMENTS FICHE PROJET -->
           <div class="card">
             <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark);">
               Fiche Synthétique
             </h4>
             <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="color: var(--text-light);">Type de Projet</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Scripting Back-End</span>
+                <span style="color: var(--text-light);">Catégorie</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Scripting &amp; Data Mining</span>
               </div>
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
                 <span style="color: var(--text-light);">Livrable</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Fiches HTML générées</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Fiches HTML automatisées</span>
               </div>
               <div style="display: flex; justify-content: space-between;">
                 <span style="color: var(--text-light);">Organisation</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Travail en Binôme</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Projet en Binôme</span>
               </div>
             </div>
           </div>
@@ -231,7 +222,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>Portfolio de <span>Yannis Rukiramarigo</span> — BUT R&amp;T Parcours Cyber</p>
