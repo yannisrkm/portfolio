@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projet 1.03 – Dispositifs de Transmission | Portfolio Yannis</title>
+  <title>Projet 1.03 – Transmission | Portfolio Yannis</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -40,13 +40,13 @@
           <span>Projet 1.03</span>
         </div>
 
-        <h1 class="page-hero-title">Projet 1.03 – Découvrir un dispositif de transmission</h1>
+        <h1 class="page-hero-title">Projet 1.03 – Découverte des dispositifs de transmission</h1>
 
         <div class="hero-tags" style="margin-top: 1rem;">
-          <span class="tag bg-soft-mauve text-soft-mauve">Projet 1.03</span>
-          <span class="tag bg-soft-blue text-soft-blue">RT2 – Connecter les entreprises</span>
+          <span class="tag bg-soft-blue text-soft-blue">Projet 1.03</span>
+          <span class="tag bg-soft-mauve text-soft-mauve">RT2 – Connecter les entreprises</span>
           <span class="tag">Semestre 1</span>
-          <span class="tag">Projet en Groupe</span>
+          <span class="tag">Projet en Trinôme</span>
         </div>
       </div>
 
@@ -55,100 +55,107 @@
         <div class="bilan-content">
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Contexte &amp; Objectifs</h3>
+            <h3>Contexte &amp; Cahier des charges</h3>
             <p>
-              La performance d'une infrastructure réseau dépend directement de la qualité physique des supports de transmission. Qu'il s'agisse de liaisons cuivre ou fibre optique, un technicien R&amp;T doit être capable d'auditer la couche physique, de mesurer l'atténuation des signaux et de localiser précisément les défauts de câblage.
+              La fiabilité d'une infrastructure réseau repose d'abord sur la qualité de sa couche physique (Couche 1 du modèle OSI). L'objectif de cette SAE était de caractériser expérimentalement les différents supports de transmission utilisés en entreprise : la fibre optique (monomode), le câble coaxial (RG58) et les paires torsadées (Ethernet)[cite: 630, 698, 699].
             </p>
             <p>
-              L'objectif de ce projet était de s'initier à la métrologie et à la caractérisation des supports de transmission. À travers des manipulations pratiques sur bancs de test, nous devions analyser le comportement des signaux physiques et valider la conformité d'une liaison par rapport aux exigences constructeurs.
+              Le <strong>cahier des charges</strong> exigeait la réalisation d'une campagne de mesures en trinôme, la manipulation d'équipements de métrologie de pointe (photomètres, analyseurs de spectre, oscilloscopes), et la rédaction de rapports d'ingénierie détaillant nos bilans de puissance et calculs de vélocité de propagation[cite: 624, 690, 693, 694]. L'analyse mathématique et physique des signaux s'est appuyée sur les fondamentaux théoriques acquis lors de mon parcours en Bac général (spécialités Mathématiques et Physique-Chimie), facilitant la modélisation des phénomènes d'atténuation.
             </p>
           </div>
 
           <div class="card" style="margin-bottom: 2rem;">
-            <h3>Tâches réalisées &amp; Méthodologie</h3>
-            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-med); display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><strong>Photométrie sur Fibre Optique :</strong> Utilisation d'une source optique calibrée et d'un photomètre professionnel (VIAVI) pour mesurer la puissance reçue et calculer l'atténuation globale d'une liaison optique en décibels (dB).</li>
-              <li><strong>Réflectométrie Temporelle (TDR) :</strong> Injection d'impulsions électriques sur des infrastructures de cuivre pour cartographier la ligne, mesurer sa longueur et localiser des anomalies (coupures, courts-circuits, ruptures d'impédance).</li>
-              <li><strong>Analyse de Signaux Physiques :</strong> Observation et caractérisation de signaux électriques, étude de l'atténuation en fonction de la fréquence et interprétation des phénomènes de réflexion.</li>
-              <li><strong>Rédaction de Rapports de Recette :</strong> Collecte méthodique des mesures terrain, comparaison avec les fiches techniques des composants et rédaction d'un bilan de qualité de liaison.</li>
-            </ul>
-          </div>
+            <h3>Démarche de production : De la mesure optique à l'analyse temporelle</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-med);">
+              Le travail s'est divisé en deux grands pôles d'expertise : l'étude photonique d'une liaison fibre optique, puis l'analyse fréquentielle et temporelle de liaisons en cuivre[cite: 618, 692, 693, 694].
+            </p>
 
-          <div class="card" style="margin-bottom: 2rem;">
-            <h3>Problèmes rencontrés &amp; Solutions</h3>
-            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
-              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">⚠️ Problème : Valeurs d'atténuation optique anormalement élevées et instables</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  Lors des premières mesures de photométrie, les pertes insérées dépassaient largement les seuils théoriques calculés, faussant le bilan de puissance de la fibre.
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 500; margin-top: 0.5rem;">
-                  ⚙️ Solution : Nettoyage des connecteurs et vérification des cordons de référence
-                </p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">
-                  Nous avons procédé au nettoyage systématique des faces optiques à l'aide de stylos de nettoyage spécialisés (One-Click cleaner) pour éliminer les impuretés microscopiques. Après inspection et recalibration de la source, les mesures se sont stabilisées dans les tolérances attendues.
-                </p>
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 1 : Photométrie et Bilan de puissance (Fibre Optique)
+              </p>
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC12.01) :</span> Mesurer et analyser les signaux. Sur la liaison "L5", nous avons utilisé un kit VIAVI (Injecteur LASER OLS-35 et Photomètre OLP-35) avec une longueur d'onde de 1550 nm[cite: 628, 629, 632, 639]. Après le calibrage du zéro, nous avons relevé une atténuation globale de 12,21 dB[cite: 635, 652].
+              </p>
+
+              <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Trace d'intervention : Dispositif de Photométrie</p>
+                
+                <img src="capture_photometrie.png" alt="Kit VIAVI connecté au tiroir optique" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                
+                <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Cette capture de notre installation illustre la méthode par insertion. Le signal traverse la bobine et les composants passifs à l'intérieur du tiroir, nous permettant de déduire l'architecture interne (ici, la présence probable d'un coupleur optique 1 vers 8)[cite: 637, 642, 676].</p>
               </div>
             </div>
-          </div>
 
-          <div class="card" style="margin-bottom: 2rem;">
-            <h3>Résultats obtenus &amp; Preuves</h3>
-            <p>
-              Les campagnes de mesures ont permis d'établir des diagnostics précis de la conformité des supports de transmission testés.
-            </p>
-            
-            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-mauve);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
-                📸 capture_reflectogramme_cuivre.png
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 2 : Réflectométrie DTF (Câbles Cuivre)
               </p>
-              <p style="color:var(--text-med);font-size:.9rem;">
-                Graphique de réflectométrie temporelle illustrant l'impulsion injectée et l'écho de réflexion, permettant de situer l'emplacement exact d'une rupture physique sur le câble de cuivre.
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                <span style="text-decoration: underline;">Apprentissage mobilisé (AC12.02) :</span> Caractériser des systèmes de transmission. Pour localiser les fins de câbles (ruptures d'impédance), nous avons paramétré un analyseur de réseau Siglent SVA1015X en mode DTF (Distance To Fault)[cite: 693, 696, 702]. Nous avons configuré la vélocité nominale (NVP) à 0.66 pour le câble RG58, et utilisé le mode "Manuel" pour filtrer le bruit initial du connecteur, obtenant ainsi une longueur mesurée de 12 mètres pour le coaxial[cite: 698, 703, 718, 827].
               </p>
+
+              <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve de mesure : Analyseur de spectre (DTF)</p>
+                
+                <img src="capture_reflectometrie.png" alt="Mesure manuelle DTF sur Siglent" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                
+                <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">Le placement précis du marqueur "Marker 1" sur le pic de réflexion du signal nous a permis de valider avec exactitude la longueur du support physique[cite: 724].</p>
+              </div>
             </div>
 
-            <div style="margin-top:1.5rem; padding:1.2rem; background:var(--bg-main); border-radius:var(--radius); border:1px solid var(--border);">
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-mauve);margin-bottom:.3rem; text-transform: uppercase; font-weight: 600;">
-                📸 capture_mesures_photometrie.png
+            <div style="margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--soft-blue);">
+              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">
+                Étape 3 : Régime Impulsionnel et Analyse Temporelle
               </p>
-              <p style="color:var(--text-med);font-size:.9rem;">
-                Tableau récapitulatif des puissances d'émission et de réception relevées au photomètre VIAVI, servant de base au calcul du bilan de liaison optique.
+              <p style="font-size: 0.95rem; margin-bottom: 1rem;">
+                Pour corroborer les résultats du réflectomètre, nous avons injecté une impulsion de 100 ns via un GBF, et mesuré le temps de parcours de l'onde réfléchie à l'aide d'un oscilloscope (Delta T de 68 ns)[cite: 989, 1005].
               </p>
+
+              <div style="padding: 1rem; background: var(--bg-main); border-radius: var(--radius); border-left: 4px solid var(--soft-mauve);">
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem;">🚨 Analyse d'incident : L'écart de mesure entre les deux protocoles</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);"><strong>Le problème :</strong> À l'issue de notre calcul de la vélocité de propagation (v = c * 0,66), l'oscilloscope nous a donné une longueur théorique de 13,5 mètres pour le câble coaxial[cite: 1026, 1028]. Or, notre mesure précédente à l'analyseur de spectre (DTF) indiquait exactement 12 mètres[cite: 827]. Cet écart de 1,5 mètre remettait en question la précision de notre métrologie.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600; margin-top: 0.5rem;">⚙️ Résolution et Rigueur scientifique :</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">En étudiant notre montage, nous avons identifié la cause physique de cette divergence : la mesure temporelle à l'oscilloscope incluait la longueur des cordons de raccordement BNC en T et les adaptateurs, qui étaient traversés par l'impulsion électrique mais non comptabilisés dans le calibrage initial du DTF. De plus, le placement du curseur sur le front montant d'un signal atténué ajoutait une marge d'erreur. Cette prise de recul a permis de valider la cohérence des deux méthodes.</p>
+                
+                <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 4px;">
+                  <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--soft-blue); font-weight: 600; text-transform: uppercase;">📸 Preuve technique : Mesure Temporelle</p>
+                  <img src="capture_oscilloscope.png" alt="Écran de l'oscilloscope" style="width: 100%; border-radius: 4px; margin: 0.5rem 0; border: 1px solid var(--border);" />
+                  <p style="font-size: 0.85rem; color: var(--text-med); margin-top: 0.25rem;">L'observation du décalage (68 ns) entre le signal source (CH1) et le signal réfléchi (CH2)[cite: 990, 993, 1005].</p>
+                </div>
+              </div>
             </div>
+
           </div>
 
           <div class="card">
-            <h3>Autoévaluation</h3>
+            <h3>Bilan du Projet &amp; Prise de recul</h3>
             <p style="margin-bottom: 1.5rem;">
-              Ce projet réalisé en équipe m'a sensibilisé à l'importance de la précision et du soin requis lors des interventions sur la couche physique des réseaux. La manipulation d'équipements de mesure professionnels a renforcé ma capacité à interpréter des données physiques concrètes.
+              Ce travail en laboratoire a transformé des concepts théoriques abstraits (impédance, dB, longueur d'onde) en réalités physiques tangibles. L'importance de la méthode de calibrage (faire le "zéro") s'est avérée cruciale pour la justesse d'un audit de câblage[cite: 635].
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
               <div style="padding: 1rem; border-left: 3px solid var(--soft-blue); background: var(--bg-main); border-radius: 0 8px 8px 0;">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">✅ Points forts</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Rigueur dans l'application des protocoles de test, bonne compréhension des mécanismes d'atténuation optique et esprit de collaboration au sein du groupe.</p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Compétences consolidées</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">La prise en main autonome d'équipements de métrologie professionnels (VIAVI, Siglent, Oscilloscopes), la réalisation de bilans de puissance optique, et la production de rapports d'expertise en équipe.</p>
               </div>
               <div style="padding: 1rem; border-left: 3px solid var(--soft-mauve); background: var(--bg-main); border-radius: 0 8px 8px 0;">
-                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">🔧 Axes de progrès</p>
-                <p style="font-size: 0.9rem; color: var(--text-med);">Approfondir l'analyse des diagrammes de l'œil et l'interprétation mathématique des coefficients de réflexion sur les lignes à très haute fréquence.</p>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Évolution des pratiques</p>
+                <p style="font-size: 0.9rem; color: var(--text-med);">Pour de futures analyses, j'accorderai une vigilance encore plus stricte au paramétrage du "Velocity Factor" (NVP) sur les analyseurs de réseaux, car une variation infime de ce paramètre fausse proportionnellement l'ensemble du calcul des distances.</p>
               </div>
             </div>
 
             <div>
-              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-mauve);margin-bottom:.5rem; text-transform: uppercase;">
-                État de validation des compétences
+              <p style="font-family:var(--font-mono);font-size:.75rem;color:var(--soft-blue);margin-bottom:.5rem; text-transform: uppercase;">
+                Validation des apprentissages finaux
               </p>
               <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
-                <span>RT2 – Mesurer et analyser les signaux physiques</span>
-                <span class="status-dot ok">Validé / Acquis</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500; margin-bottom: 0.5rem;">
-                <span>RT2 – Caractériser des systèmes de transmission</span>
-                <span class="status-dot ok">Validé / Acquis</span>
+                <span>RT2 – Mesurer et analyser les signaux</span>
+                <span class="status-dot ok">Acquis</span>
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; font-size: .85rem; font-weight: 500;">
-                <span>RT2 – Déployer des supports de transmission</span>
-                <span class="status-dot ok">Validé / Acquis</span>
+                <span>RT2 – Caractériser des systèmes de transmission</span>
+                <span class="status-dot ok">Acquis</span>
               </div>
             </div>
           </div>
@@ -157,37 +164,45 @@
 
         <aside>
           <div class="card" style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Apprentissages critiques</h4>
-            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.01</span>
-                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Mesurer et analyser les signaux</span>
-              </div>
-              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.02</span>
-                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Caractériser des systèmes de transmission</span>
-              </div>
-              <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                <span class="tag bg-soft-mauve text-soft-mauve" style="font-size: 0.65rem;">AC12.03</span>
-                <span style="font-size: 0.85rem; color: var(--text-med); line-height: 1.4;">Déployer des supports de transmission</span>
-              </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              📚 Vocabulaire Technique
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; color: var(--text-med);">
+              <p><strong>Photométrie :</strong> Technique de mesure de la puissance lumineuse (en dBm) traversant une fibre optique pour en déduire les pertes d'atténuation[cite: 618].</p>
+              <p><strong>Réflectométrie (DTF) :</strong> Méthode consistant à envoyer un signal dans un câble et à analyser son écho pour localiser précisément un défaut ou une coupure[cite: 693].</p>
+              <p><strong>NVP (Velocity Factor) :</strong> Vitesse de propagation d'un signal dans un câble, exprimée en pourcentage par rapport à la vitesse de la lumière dans le vide (ex: 66%)[cite: 698].</p>
+              <p><strong>Coupleur Optique (Splitter) :</strong> Composant passif divisant un signal lumineux entrant vers plusieurs fibres de sortie (ex: 1 vers 8)[cite: 667, 676].</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">
+              🛠️ Équipements de Labo
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="tag" style="width: 100%; text-align: center;">Kit VIAVI OLS/OLP-35</span>
+              <span class="tag" style="width: 100%; text-align: center;">Siglent SVA1015X (Analyseur)</span>
+              <span class="tag" style="width: 100%; text-align: center;">Oscilloscope &amp; GBF</span>
+              <span class="tag" style="width: 100%; text-align: center;">Fibre Monomode &amp; RG58</span>
             </div>
           </div>
 
           <div class="card">
-            <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;">Fiche Projet</h4>
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-dark);">
+              Fiche Synthétique
+            </h4>
             <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="color: var(--text-light);">Semestre</span>
-                <span style="font-weight: 500; color: var(--text-dark);">S1</span>
+                <span style="color: var(--text-light);">Objectif visé</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Audit Physique (Couche 1)</span>
               </div>
               <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                <span style="color: var(--text-light);">Modalité</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Travail en Groupe</span>
+                <span style="color: var(--text-light);">Livrables</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Rapports d'ingénierie</span>
               </div>
               <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-light);">Outils</span>
-                <span style="font-weight: 500; color: var(--text-dark);">Photomètre, TDR</span>
+                <span style="color: var(--text-light);">Organisation</span>
+                <span style="font-weight: 500; color: var(--text-dark);">Binôme / Trinôme Labo</span>
               </div>
             </div>
           </div>
